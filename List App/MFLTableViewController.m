@@ -12,6 +12,14 @@
 
 @property (nonatomic) NSArray * listItems;
 
+// create an array for students (nsstrings)
+
+// create an array for colors UIcolors
+
+// create an array for sizes nsnumbers
+
+//
+
 @end
 
 @implementation MFLTableViewController
@@ -23,9 +31,14 @@
         // Custom initialization
        
         
-        self.listItems = @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday",@"Friday"];
+        self.listItems = @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday",@"Friday", @"Saturday", @"Sunday"];
       
+        // set 7 students
         
+    
+        // set 7 colors
+        
+        // set 7 numbers (20-40)
       
     }
     return self;
@@ -74,8 +87,14 @@
     NSLog(@"%@",listItems);
     
     cell.textLabel.text = listItems;
-    
+    //there is a subtext that you need to set by student name
+    //set background color to color in array
     cell.backgroundColor = [UIColor greenColor];
+    
+    // set the textlabel font size to a number from the sizes array---------------------------
+    
+    
+    
     
     
     // Configure the cell..
