@@ -19,6 +19,7 @@
 		B4D115B3197FFB1600AE248F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D1159B197FFB1600AE248F /* UIKit.framework */; };
 		B4D115BB197FFB1600AE248F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4D115B9197FFB1600AE248F /* InfoPlist.strings */; };
 		B4D115BD197FFB1600AE248F /* List_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D115BC197FFB1600AE248F /* List_AppTests.m */; };
+		B4D115C9198005FC00AE248F /* MFLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D115C8198005FC00AE248F /* MFLTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		B4D115B8197FFB1600AE248F /* List AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "List AppTests-Info.plist"; sourceTree = "<group>"; };
 		B4D115BA197FFB1600AE248F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4D115BC197FFB1600AE248F /* List_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = List_AppTests.m; sourceTree = "<group>"; };
+		B4D115C7198005FC00AE248F /* MFLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLTableViewController.h; sourceTree = "<group>"; };
+		B4D115C8198005FC00AE248F /* MFLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		B4D1158B197FFB1600AE248F = {
 			isa = PBXGroup;
 			children = (
+				B4D115C61980058300AE248F /* Controllers */,
 				B4D1159D197FFB1600AE248F /* List App */,
 				B4D115B6197FFB1600AE248F /* List AppTests */,
 				B4D11596197FFB1600AE248F /* Frameworks */,
@@ -142,6 +146,15 @@
 				B4D115B9197FFB1600AE248F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4D115C61980058300AE248F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4D115C7198005FC00AE248F /* MFLTableViewController.h */,
+				B4D115C8198005FC00AE248F /* MFLTableViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D115C9198005FC00AE248F /* MFLTableViewController.m in Sources */,
 				B4D115A8197FFB1600AE248F /* MFLAppDelegate.m in Sources */,
 				B4D115A4197FFB1600AE248F /* main.m in Sources */,
 			);
