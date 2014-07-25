@@ -8,7 +8,7 @@
 
 #import "GFATableViewController.h"
 #import "GFATableViewCell.h"
-
+#import "GFAViewController.h"
 @interface GFATableViewController () <UITextFieldDelegate>
 
 
@@ -44,6 +44,7 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
 
             },
         @{
@@ -53,6 +54,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -62,6 +65,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -71,6 +76,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -80,6 +87,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -89,6 +98,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -98,6 +109,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -107,6 +120,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -116,6 +131,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -125,6 +142,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -134,6 +153,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         @{
@@ -143,6 +164,8 @@
             @"location": @"Atlanta, GA",
             @"followers": @"0",
             @"following":@"0",
+            @"html_url": @"https://github.com/jhend11",
+
             
             },
         
@@ -176,6 +199,8 @@
     
     self.tableView.tableHeaderView = headerView;
     
+    headerView.backgroundColor = [UIColor colorWithRed:0.937f green:0.125f blue:0.333f alpha:1.0f];
+    
     
     
     search = [[UITextField alloc] initWithFrame:CGRectMake(screenWidth + 20, 35,220, 45.0)];
@@ -197,11 +222,18 @@
     
     
     
-    find = [[UIButton alloc]initWithFrame:CGRectMake(screenWidth + 260.0, 30, 50.0, 50)];
-    find.backgroundColor = [UIColor lightGrayColor];
-    [find setTitle:@"?" forState:UIControlStateNormal];
-    [find addTarget:self action:@selector(findButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
-    find.layer.cornerRadius = 25;
+//    find = [[UIButton alloc]initWithFrame:CGRectMake(screenWidth + 260.0, 30, 50.0, 50)];
+//    find.backgroundColor = [UIColor lightGrayColor];
+//    [find setTitle:@"?" forState:UIControlStateNormal];
+//    [find addTarget:self action:@selector(findButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
+//    find.layer.cornerRadius = 25;
+//    [self.view addSubview:find];
+    
+    
+    find = [UIButton buttonWithType:UIButtonTypeCustom];
+    find.frame = CGRectMake(screenWidth + 260.0, 30, 50.0, 50);
+    [find setBackgroundImage:[UIImage imageNamed:@"searchButton.png"] forState:UIControlStateNormal];
+    //        [btn addTarget:self action:@selector(btnSendComment_pressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:find];
 
 //    UIButton * buttonPad = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
@@ -299,7 +331,7 @@
     
     
     cell.friendInfo = githubFriends[indexPath.row];
-    cell.backgroundColor = [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.0f];
+    cell.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
     
     
     
@@ -307,6 +339,21 @@
     // Configure the cell...
     
     return cell;
+}
+
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"select row @ %@", indexPath);
+    
+    GFAViewController * profileView = [[GFAViewController alloc]init];
+    
+    profileView.view.backgroundColor = [UIColor lightGrayColor];
+    
+    [self.navigationController pushViewController:profileView animated:1];
+    
+    profileView.friendInfo = githubFriends[indexPath.row];
 }
 
 

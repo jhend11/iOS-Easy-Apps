@@ -20,7 +20,9 @@
     
     
     UIButton * gist;
-    UIButton * profile;
+    UIButton * btn;
+    
+    UIImage * downArrow;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -71,24 +73,42 @@
         friendImage.layer.masksToBounds = 1;
         
         
-        gist = [[UIButton alloc]initWithFrame:CGRectMake(220.0, 50, 80.0, 30)];
-        [gist setTitle:@"Gist" forState:UIControlStateNormal];
-        gist.backgroundColor = [UIColor colorWithRed:0.769f green:0.769f blue:0.769f alpha:1.0f];
+        gist = [[UIButton alloc]initWithFrame:CGRectMake(220.0, 50, 60.0, 25)];
+        [gist setTitle:@"GISTS" forState:UIControlStateNormal];
+        gist.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
         [gist addTarget:self action:@selector(gistButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
-        gist.layer.cornerRadius = 15;
+        gist.layer.cornerRadius = 12;
         gist.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
+        gist.layer.borderWidth = 0.25;
+        gist.layer.borderColor = [[UIColor whiteColor]CGColor];
 
         [self.contentView addSubview:gist];
         
+//        NSData * data2 = [NSData dataWithContentsOfFile:/Users/midniteslide/Downloads/githubFriends];
+//        UIImage * image2 = [UIImage imageWithData:data2];
         
-        profile = [[UIButton alloc]initWithFrame:CGRectMake(220.0, 10, 80.0, 30)];
-        [profile setTitle:@"Profile" forState:UIControlStateNormal];
-        profile.backgroundColor = [UIColor colorWithRed:0.769f green:0.769f blue:0.769f alpha:1.0f];
-        [profile addTarget:self action:@selector(profileButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
-        profile.layer.cornerRadius = 15;
-        profile.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
+        
+        btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(200, 0, 20, 20);
+        [btn setBackgroundImage:[UIImage imageNamed:@"downArrow.png"] forState:UIControlStateNormal];
+//        [btn addTarget:self action:@selector(btnSendComment_pressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:btn];
+        
+    
+        
+//        profile = [[UIButton alloc]imageView:CGRectMake(220.0, 10, 30.0, 30)];
+//        [profile setBackgroundImage:btn forState:UIControlStateNormal];
+//        [profile setTitle:@">" forState:UIControlStateNormal];
+//        profile.backgroundColor = [UIColor colorWithRed:0.769f green:0.769f blue:0.769f alpha:1.0f];
+//        [profile addTarget:self action:@selector(profileButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
+//        profile.layer.cornerRadius = 15;
+//        profile.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
+        
+        
+      
 
-        [self.contentView addSubview:profile];
+
+//        [self.contentView addSubview:profile];
         
         
         
@@ -121,12 +141,13 @@
     UIImage * image = [UIImage imageWithData:data];
     
     
+    
+    
     friendName.text = friendInfo[@"login"];
     friendImage.image = image;
     
     friendLoc.text = friendInfo[@"location"];
-//    following.text = friendInfo[@"following"];
-//    followers.text = friendInfo[@"followers"];
+
     
     
     

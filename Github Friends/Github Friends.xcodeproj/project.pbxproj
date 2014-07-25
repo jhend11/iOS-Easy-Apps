@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B48359D81982A7ED0052409E /* GFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48359D71982A7ED0052409E /* GFAViewController.m */; };
+		B48359DA1982D3150052409E /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B48359D91982D3150052409E /* downArrow.png */; };
+		B48359DF1982D9840052409E /* profileArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B48359DC1982D9840052409E /* profileArrow.png */; };
+		B48359E01982D9840052409E /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B48359DD1982D9840052409E /* searchButton.png */; };
+		B48359E11982D9840052409E /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B48359DE1982D9840052409E /* upArrow.png */; };
 		B4D115D719813EEE00AE248F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D115D619813EEE00AE248F /* Foundation.framework */; };
 		B4D115D919813EEE00AE248F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D115D819813EEE00AE248F /* CoreGraphics.framework */; };
 		B4D115DB19813EEE00AE248F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D115DA19813EEE00AE248F /* UIKit.framework */; };
@@ -34,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B48359D61982A7ED0052409E /* GFAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFAViewController.h; sourceTree = "<group>"; };
+		B48359D71982A7ED0052409E /* GFAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFAViewController.m; sourceTree = "<group>"; };
+		B48359D91982D3150052409E /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = downArrow.png; path = ../../../Downloads/githubFriends/downArrow.png; sourceTree = "<group>"; };
+		B48359DC1982D9840052409E /* profileArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileArrow.png; path = ../../../Downloads/githubFriends/profileArrow.png; sourceTree = "<group>"; };
+		B48359DD1982D9840052409E /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = searchButton.png; path = ../../../Downloads/githubFriends/searchButton.png; sourceTree = "<group>"; };
+		B48359DE1982D9840052409E /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = upArrow.png; path = ../../../Downloads/githubFriends/upArrow.png; sourceTree = "<group>"; };
 		B4D115D319813EEE00AE248F /* Github Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D115D619813EEE00AE248F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B4D115D819813EEE00AE248F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,9 +91,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B48359DB1982D57D0052409E /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				B48359DC1982D9840052409E /* profileArrow.png */,
+				B48359DD1982D9840052409E /* searchButton.png */,
+				B48359DE1982D9840052409E /* upArrow.png */,
+				B48359D91982D3150052409E /* downArrow.png */,
+			);
+			name = Pics;
+			sourceTree = "<group>";
+		};
 		B4D115CA19813EEE00AE248F = {
 			isa = PBXGroup;
 			children = (
+				B48359DB1982D57D0052409E /* Pics */,
 				B4D1160519813EF500AE248F /* Controllers */,
 				B4D115DC19813EEE00AE248F /* Github Friends */,
 				B4D115F519813EEE00AE248F /* Github FriendsTests */,
@@ -158,6 +181,8 @@
 				B4D1160719813F9600AE248F /* GFATableViewController.m */,
 				B4D116091981481300AE248F /* GFATableViewCell.h */,
 				B4D1160A1981481300AE248F /* GFATableViewCell.m */,
+				B48359D61982A7ED0052409E /* GFAViewController.h */,
+				B48359D71982A7ED0052409E /* GFAViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -238,8 +263,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48359DA1982D3150052409E /* downArrow.png in Resources */,
 				B4D115E119813EEE00AE248F /* InfoPlist.strings in Resources */,
 				B4D115E919813EEE00AE248F /* Images.xcassets in Resources */,
+				B48359DF1982D9840052409E /* profileArrow.png in Resources */,
+				B48359E11982D9840052409E /* upArrow.png in Resources */,
+				B48359E01982D9840052409E /* searchButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48359D81982A7ED0052409E /* GFAViewController.m in Sources */,
 				B4D1160819813F9600AE248F /* GFATableViewController.m in Sources */,
 				B4D115E319813EEE00AE248F /* main.m in Sources */,
 				B4D1160B1981481300AE248F /* GFATableViewCell.m in Sources */,
@@ -458,6 +488,7 @@
 				B4D1160119813EEE00AE248F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4D1160219813EEE00AE248F /* Build configuration list for PBXNativeTarget "Github FriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +497,7 @@
 				B4D1160419813EEE00AE248F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
