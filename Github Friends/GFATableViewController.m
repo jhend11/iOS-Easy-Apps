@@ -9,7 +9,7 @@
 #import "GFATableViewController.h"
 #import "GFATableViewCell.h"
 #import "GFAViewController.h"
-@interface GFATableViewController () <UITextFieldDelegate>
+@interface GFATableViewController () <UITextFieldDelegate, UITableViewDelegate>
 
 
 @end
@@ -23,7 +23,8 @@
     
     UIButton * find;
     
-    
+    UIButton * profile;
+
     
     
 }
@@ -39,31 +40,31 @@
                            
         @{
                                
-            @"login": @"jhend11",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/7279926?",
             @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
+            @"followers":@"10",
+            @"following":@"5",
             @"html_url": @"https://github.com/jhend11",
 
             },
         @{
             
-            @"login": @"Anterio",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/8224728?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
-            @"following":@"0",
+            @"following":@"10",
             @"html_url": @"https://github.com/jhend11",
 
             
             },
         @{
             
-            @"login": @"josephlausf",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/7451830?",
             @"location": @"Atlanta, GA",
-            @"followers": @"0",
+            @"followers": @"5",
             @"following":@"0",
             @"html_url": @"https://github.com/jhend11",
 
@@ -71,29 +72,29 @@
             },
         @{
             
-            @"login": @"kalson",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/7114996?",
             @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
+            @"followers": @"11",
+            @"following":@"12",
             @"html_url": @"https://github.com/jhend11",
 
             
             },
         @{
             
-            @"login": @"jeremycbutler",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/7903562?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
-            @"following":@"0",
+            @"following":@"5",
             @"html_url": @"https://github.com/jhend11",
 
             
             },
         @{
             
-            @"login": @"renecandelier",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/4494771?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -104,7 +105,7 @@
             },
         @{
             
-            @"login": @"ericstephen",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/8224735?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -115,7 +116,7 @@
             },
         @{
             
-            @"login": @"schwaebek",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/6909470?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -126,7 +127,7 @@
             },
         @{
             
-            @"login": @"ewjseidel",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/8224720?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -137,7 +138,7 @@
             },
         @{
             
-            @"login": @"npeterson213",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/8224722?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -148,7 +149,7 @@
             },
         @{
             
-            @"login": @"dmerrill88",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/8224723?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -159,7 +160,7 @@
             },
         @{
             
-            @"login": @"jaimeconnor",
+            @"name": @"Joshua Hendershot",
             @"avatar_url": @"https://avatars.githubusercontent.com/u/8224727?",
             @"location": @"Atlanta, GA",
             @"followers": @"0",
@@ -322,6 +323,8 @@
     GFATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     
+
+    
     if (cell == nil)
     {
         cell = [[GFATableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -340,6 +343,22 @@
     
     return cell;
 }
+-(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    
+}
+
+-(void)profileButtonWasClicked
+{
+    
+    UINavigationController* sender = [[UINavigationController alloc]init];
+    
+    
+    sender.view.backgroundColor = [UIColor lightGrayColor];
+    
+    [self.navigationController pushViewController:sender animated:YES];
+    
+}
 
 
 
@@ -354,7 +373,13 @@
     [self.navigationController pushViewController:profileView animated:1];
     
     profileView.friendInfo = githubFriends[indexPath.row];
+    
+
+    
+    
 }
+
+
 
 
 /*

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GFAAppDelegate : UIResponder <UIApplicationDelegate>
+@interface GFAAppDelegate : UIResponder <UIApplicationDelegate,UINavigationControllerDelegate >
 
 @property (strong, nonatomic) UIWindow *window;
 

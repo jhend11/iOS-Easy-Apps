@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GFAViewController : UIViewController
+@interface GFAViewController : UIViewController <UINavigationControllerDelegate>
+
 @property (nonatomic) NSDictionary * friendInfo;
+
 @end

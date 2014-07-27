@@ -8,6 +8,7 @@
 
 #import "GFAAppDelegate.h"
 #import "GFATableViewController.h"
+#import "GFAViewController.h"
 
 @implementation GFAAppDelegate
 
@@ -17,7 +18,7 @@
     // Override point for customization after application launch.
     
     
-   
+
     
     
     UINavigationController *nC = [[UINavigationController alloc]initWithRootViewController:[[GFATableViewController alloc]initWithStyle:UITableViewStylePlain]];

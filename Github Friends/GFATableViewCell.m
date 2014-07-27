@@ -7,6 +7,8 @@
 //
 
 #import "GFATableViewCell.h"
+@interface UITableViewController () <UIPageViewControllerDelegate>
+@end
 
 @implementation GFATableViewCell
 {
@@ -17,13 +19,31 @@
     UILabel * friendLoc;
     UILabel * followers;
     UILabel * following;
-    
+    UILabel * gist2;
+    UILabel * up;
+    UILabel * down;
+    UILabel * blank;
+    UILabel * leader;
+    UILabel * follower;
+    UILabel * justFriends;
     
     UIButton * gist;
     UIButton * btn;
+    UIButton * btn1;
+    
+    UIButton * profile;
     
     UIImage * downArrow;
+    
+    
+    UIWebView * webView;
+    
+    
+    
 }
+
+
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -32,21 +52,13 @@
         // Initialization code
         
         
+        
+        
         self.layer.borderWidth = 0.25;
         self.layer.borderColor = [[UIColor blackColor]CGColor];
         
         
-//        cell.textLabel.text = githubFriends[indexPath.row][@"followers"];
-//        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:15];
-//        cell.textLabel.
 
-        followers = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 100, 20)];
-        [self.contentView addSubview:followers];
-        followers.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
-        
-        following = [[UILabel alloc] initWithFrame:CGRectMake(10, 60, 100, 20)];
-        [self.contentView addSubview:following];
-        following.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
         
         
         friendLoc =[[UILabel alloc] initWithFrame:CGRectMake(120, 40, 200, 40)];
@@ -57,58 +69,54 @@
         
         
         
-        friendName = [[UILabel alloc]initWithFrame:CGRectMake(90, 10, 200, 40)];
+        friendName = [[UILabel alloc]initWithFrame:CGRectMake(100, 5, 200, 40)];
         [self.contentView addSubview:friendName];
         friendName.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
+        friendName.textColor = [UIColor whiteColor];
 
         
-        friendLoc = [[UILabel alloc]initWithFrame:CGRectMake(90, 40, 200, 40)];
+        friendLoc = [[UILabel alloc]initWithFrame:CGRectMake(100, 30, 200, 40)];
         [self.contentView addSubview:friendLoc];
         friendLoc.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
+        friendLoc.textColor = [UIColor whiteColor];
+
+    
 
         
-        friendImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 40, 40)];
+        friendImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 90, 90)];
         [self.contentView addSubview:friendImage];
-        friendImage.layer.cornerRadius = 20;
-        friendImage.layer.masksToBounds = 1;
+
         
         
-        gist = [[UIButton alloc]initWithFrame:CGRectMake(220.0, 50, 60.0, 25)];
+        gist = [[UIButton alloc]initWithFrame:CGRectMake(250.0, 50, 60.0, 25)];
         [gist setTitle:@"GISTS" forState:UIControlStateNormal];
         gist.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
         [gist addTarget:self action:@selector(gistButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
         gist.layer.cornerRadius = 12;
         gist.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
-        gist.layer.borderWidth = 0.25;
+        gist.layer.borderWidth = 0.5;
         gist.layer.borderColor = [[UIColor whiteColor]CGColor];
-
         [self.contentView addSubview:gist];
         
-//        NSData * data2 = [NSData dataWithContentsOfFile:/Users/midniteslide/Downloads/githubFriends];
-//        UIImage * image2 = [UIImage imageWithData:data2];
+        gist2 = [[UILabel alloc]initWithFrame:CGRectMake(230.0, 50, 25.0, 25)];
+        gist2.layer.cornerRadius = 12;
+        gist2.layer.masksToBounds= 1;
+        gist2.backgroundColor = [UIColor whiteColor];
+        [self.contentView addSubview:gist2];
+        gist2.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
+        gist2.textAlignment= NSTextAlignmentCenter;
         
         
-        btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(200, 0, 20, 20);
-        [btn setBackgroundImage:[UIImage imageNamed:@"downArrow.png"] forState:UIControlStateNormal];
-//        [btn addTarget:self action:@selector(btnSendComment_pressed:) forControlEvents:UIControlEventTouchUpInside];
-        [self.contentView addSubview:btn];
         
+        
+        
+        profile = [UIButton buttonWithType:UIButtonTypeCustom];
+        profile.frame = CGRectMake(260.0, 10, 30, 30);
+        [profile setBackgroundImage:[UIImage imageNamed:@"profileArrow.png"] forState:UIControlStateNormal];
+        [profile addTarget:self action:@selector(profileButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:profile];
     
-        
-//        profile = [[UIButton alloc]imageView:CGRectMake(220.0, 10, 30.0, 30)];
-//        [profile setBackgroundImage:btn forState:UIControlStateNormal];
-//        [profile setTitle:@">" forState:UIControlStateNormal];
-//        profile.backgroundColor = [UIColor colorWithRed:0.769f green:0.769f blue:0.769f alpha:1.0f];
-//        [profile addTarget:self action:@selector(profileButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
-//        profile.layer.cornerRadius = 15;
-//        profile.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
-        
-        
-      
 
-
-//        [self.contentView addSubview:profile];
         
         
         
@@ -117,10 +125,42 @@
 }
 
 
+//
+//-(void)setNavigationController:(UINavigationController *)navigationController
+//{
+//    _navigationController = navigationController;
+//    
+//    
+//    NSURL * url = [NSURL URLWithString:self.friendInfo[@"html_url"]];
+//    
+//    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+//    [webView loadRequest:request];
+//}
 
 
 
+-(void)profileButtonWasClicked
+{
+    
+    UIViewController* sender = [[UIViewController alloc]init];
+    
+    
+    sender.view.backgroundColor = [UIColor lightGrayColor];
+    
+    [self.navigationController pushViewController:sender animated:YES];
+    
 
+   
+    
+    
+    
+//    NSURL * url = [NSURL URLWithString:self.friendInfo[@"html_url"]];
+//    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+//    webView = [[UIWebView alloc]initWithFrame:self.frame];
+//    [webView loadRequest:request];
+//    [self  addSubview:webView];
+    NSLog(@"profileButton was clicked");
+}
 
 
 
@@ -141,21 +181,116 @@
     UIImage * image = [UIImage imageWithData:data];
     
     
+    NSURL * url2 = [NSURL URLWithString:self.friendInfo[@"html_url"]];
     
+    NSURLRequest * request = [NSURLRequest requestWithURL:url2];
+    [webView loadRequest:request];
     
-    friendName.text = friendInfo[@"login"];
+    friendName.text = friendInfo[@"name"];
     friendImage.image = image;
     
     friendLoc.text = friendInfo[@"location"];
+    
+    gist2.text = friendInfo[@"followers"];
+    
+    int a = [friendInfo[@"followers"] intValue] - [friendInfo[@"following"] intValue];
+//    int b = [friendInfo[@"following"] intValue] - [friendInfo[@"followers"] intValue];
 
-    
-    
-    
-    NSString * followerString = [NSString stringWithFormat:@"Followers : %@", friendInfo[@"followers"]];
-    followers.text = followerString;
-    
-    NSString * followingString = [NSString stringWithFormat:@"Following : %@", friendInfo[@"following"]];
-    following.text = followingString;
+    if (a > 0)
+    {
+        btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(100, 65, 20, 20);
+        [btn setBackgroundImage:[UIImage imageNamed:@"upArrow.png"] forState:UIControlStateNormal];
+        [self.contentView addSubview:btn];
+
+        down= [[UILabel alloc]initWithFrame:CGRectMake(118.0, 65, 20.0, 20)];
+        down.layer.cornerRadius = 10;
+        down.layer.masksToBounds= 1;
+        down.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        down.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        down.textColor = [UIColor whiteColor];
+        down.textAlignment= NSTextAlignmentCenter;
+        down.layer.borderWidth = 0.5;
+        down.layer.borderColor = [[UIColor whiteColor]CGColor];
+        down.text = [NSString stringWithFormat:@"%d", abs(a)];
+        [self.contentView addSubview:down];
+        
+        leader= [[UILabel alloc]initWithFrame:CGRectMake(148.0, 65, 40.0, 20)];
+        leader.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        leader.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        leader.text = @"Leader";
+        leader.textColor = [UIColor colorWithRed:0.196f green:0.973f blue:0.749f alpha:1.0f];
+        leader.textAlignment= NSTextAlignmentCenter;
+        [self.contentView addSubview:leader];
+        
+
+
+    }
+
+    else if (a < 0)
+    {
+    btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn1.frame = CGRectMake(100, 65, 20, 20);
+    [btn1 setBackgroundImage:[UIImage imageNamed:@"downArrow.png"] forState:UIControlStateNormal];
+    [self.contentView addSubview:btn1];
+
+        down= [[UILabel alloc]initWithFrame:CGRectMake(118.0, 65, 20.0, 20)];
+        down.layer.cornerRadius = 10;
+        down.layer.masksToBounds= 1;
+        down.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        down.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        down.textAlignment= NSTextAlignmentCenter;
+        down.layer.borderWidth = 0.5;
+        down.layer.borderColor = [[UIColor whiteColor]CGColor];
+        down.textColor = [UIColor whiteColor];
+        down.text = [NSString stringWithFormat:@"%d", abs(a)];
+
+        [self.contentView addSubview:down];
+        
+        follower= [[UILabel alloc]initWithFrame:CGRectMake(148.0, 65, 40.0, 20)];
+        follower.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        follower.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        follower.text = @"Follower";
+        follower.textColor = [UIColor redColor];
+        follower.textAlignment= NSTextAlignmentCenter;
+        [self.contentView addSubview:follower];
+
+        
+    }
+    else
+    {
+        
+        
+        btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn1.frame = CGRectMake(100, 65, 20, 20);
+        btn1.layer.cornerRadius = 10;
+        btn1.layer.masksToBounds = YES;
+        btn1.backgroundColor = [UIColor colorWithRed:0.498f green:0.498f blue:0.498f alpha:1.0f];
+        [self.contentView addSubview:btn1];
+        
+        down= [[UILabel alloc]initWithFrame:CGRectMake(118.0, 65, 20.0, 20)];
+        down.layer.cornerRadius = 10;
+        down.layer.masksToBounds= 1;
+        down.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        down.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        down.textAlignment= NSTextAlignmentCenter;
+        down.layer.borderWidth = 0.5;
+        down.layer.borderColor = [[UIColor whiteColor]CGColor];
+        down.textColor = [UIColor whiteColor];
+        down.text = [NSString stringWithFormat:@"%d", a];
+
+        [self.contentView addSubview:down];
+        
+        justFriends= [[UILabel alloc]initWithFrame:CGRectMake(148.0, 65, 60.0, 20)];
+        justFriends.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
+        justFriends.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:10];
+        justFriends.text = @"Just Friends";
+        justFriends.textColor = [UIColor colorWithRed:0.498f green:0.498f blue:0.498f alpha:1.0f];
+        justFriends.textAlignment= NSTextAlignmentCenter;
+        [self.contentView addSubview:justFriends];
+        
+    }
+
     
     
     
@@ -166,10 +301,8 @@
 }
 
 
--(void)profileButtonWasClicked
-{
-    NSLog(@"profileButton was clicked");
-}
+
+
 -(void)gistButtonWasClicked
 {
     NSLog(@"gistButton was clicked");

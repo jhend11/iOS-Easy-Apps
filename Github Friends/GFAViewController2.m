@@ -1,63 +1,32 @@
 //
-//  GFAViewController.m
+//  GFAViewController2.m
 //  Github Friends
 //
-//  Created by JOSH HENDERSHOT on 7/25/14.
+//  Created by JOSH HENDERSHOT on 7/26/14.
 //  Copyright (c) 2014 Joshua Hendershot. All rights reserved.
 //
 
-#import "GFAViewController.h"
+#import "GFAViewController2.h"
 
-@interface GFAViewController ()
+@interface GFAViewController2 ()
 
 @end
 
-@implementation GFAViewController
-
-UIWebView * webView;
-
-
+@implementation GFAViewController2
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-//        webView = [[UIWebView alloc]initWithFrame:self.view.frame];
-//        
-//        [self.view  addSubview:webView];
-       
     }
     return self;
 }
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-   
-   
-
-    
-}
-
-
-
-
-
--(void)setFriendInfo:(NSDictionary *)friendInfo
-{
-    _friendInfo = friendInfo;
-    
-    
-    NSURL * url = [NSURL URLWithString:self.friendInfo[@"html_url"]];
-    
-    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
-    [self.view  addSubview:webView];
 }
 
 - (void)didReceiveMemoryWarning
