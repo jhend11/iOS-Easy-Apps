@@ -7,11 +7,16 @@
 //
 
 #import "GFATableViewCell.h"
+#import "GRAGithubRequest.h"
+#import "GFAViewController.h"
+#import "GFAViewController2222222.h"
 @interface UITableViewController () <UIPageViewControllerDelegate>
 @end
 
 @implementation GFATableViewCell
 {
+    NSMutableArray * githubFriends;
+
     UILabel * friendName;
     
     UIImageView * friendImage;
@@ -102,10 +107,10 @@
         gist2.layer.cornerRadius = 12;
         gist2.layer.masksToBounds= 1;
         gist2.backgroundColor = [UIColor whiteColor];
-        [self.contentView addSubview:gist2];
         gist2.font = [UIFont fontWithName:@"HelveticaNeue-Light"size:15];
         gist2.textAlignment= NSTextAlignmentCenter;
-        
+        [self.contentView addSubview:gist2];
+
         
         
         
@@ -125,40 +130,23 @@
 }
 
 
-//
-//-(void)setNavigationController:(UINavigationController *)navigationController
-//{
-//    _navigationController = navigationController;
-//    
-//    
-//    NSURL * url = [NSURL URLWithString:self.friendInfo[@"html_url"]];
-//    
-//    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-//    [webView loadRequest:request];
-//}
-
 
 
 -(void)profileButtonWasClicked
 {
     
-    UIViewController* sender = [[UIViewController alloc]init];
+    GFAViewController* sender = [[GFAViewController alloc]init];
     
     
     sender.view.backgroundColor = [UIColor lightGrayColor];
     
+    sender.friendInfo = self.friendInfo;
+    
+    
+    
     [self.navigationController pushViewController:sender animated:YES];
     
 
-   
-    
-    
-    
-//    NSURL * url = [NSURL URLWithString:self.friendInfo[@"html_url"]];
-//    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-//    webView = [[UIWebView alloc]initWithFrame:self.frame];
-//    [webView loadRequest:request];
-//    [self  addSubview:webView];
     NSLog(@"profileButton was clicked");
 }
 
@@ -189,9 +177,13 @@
     friendName.text = friendInfo[@"name"];
     friendImage.image = image;
     
-    friendLoc.text = friendInfo[@"location"];
+    NSNumber * num = _friendInfo[@"public_gists"];
+    NSString *numStr = [NSString stringWithFormat:@"%@",num];
+    gist2.text = numStr;
+
+    friendLoc.text = friendInfo[@"loaction"];
     
-    gist2.text = friendInfo[@"followers"];
+     // coonvert nsnumber to nsstring
     
     int a = [friendInfo[@"followers"] intValue] - [friendInfo[@"following"] intValue];
 //    int b = [friendInfo[@"following"] intValue] - [friendInfo[@"followers"] intValue];
@@ -305,7 +297,32 @@
 
 -(void)gistButtonWasClicked
 {
-    NSLog(@"gistButton was clicked");
+    GFAViewController2222222* sender1 = [[GFAViewController2222222 alloc]init];
+    
+    
+    sender1.view.backgroundColor = [UIColor lightGrayColor];
+    
+    sender1.friendInfo = self.friendInfo;
+    
+    
+    
+    [self.navigationController pushViewController:sender1 animated:YES];
+    
+    
+    NSLog(@"gist was clicked");
+    
+    
+    
+    
+//    GFAViewController * profileView = [[GFAViewController alloc]init];
+//    
+//    profileView.view.backgroundColor = [UIColor lightGrayColor];
+//    
+//    NSString * gistURL = [NSString stringWithFormat:@"https://gist.github.com/%@", self.friendInfo[@"login"]];
+//    profileView.friendInfo = @{@"html_url":gistURL};
+//    [self.navigationController pushViewController:profileView animated:YES];
+    
+
 }
 
 

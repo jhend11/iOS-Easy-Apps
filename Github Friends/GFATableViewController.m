@@ -9,8 +9,9 @@
 #import "GFATableViewController.h"
 #import "GFATableViewCell.h"
 #import "GFAViewController.h"
+#import "GRAGithubRequest.h"
 @interface GFATableViewController () <UITextFieldDelegate, UITableViewDelegate>
-
+//   3e4d1f26315b54680f936f644ae117fac87ae697
 
 @end
 
@@ -36,143 +37,19 @@
     if (self) {
         // Custom initialization
         
-        githubFriends = [@[
-                           
-        @{
-                               
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/7279926?",
-            @"location": @"Atlanta, GA",
-            @"followers":@"10",
-            @"following":@"5",
-            @"html_url": @"https://github.com/jhend11",
-
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224728?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"10",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/7451830?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"5",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/7114996?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"11",
-            @"following":@"12",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/7903562?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"5",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/4494771?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224735?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/6909470?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224720?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224722?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224723?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
-        @{
-            
-            @"name": @"Joshua Hendershot",
-            @"avatar_url": @"https://avatars.githubusercontent.com/u/8224727?",
-            @"location": @"Atlanta, GA",
-            @"followers": @"0",
-            @"following":@"0",
-            @"html_url": @"https://github.com/jhend11",
-
-            
-            },
+        githubFriends = [@[] mutableCopy];
         
-                          
-                           
-        ] mutableCopy];
+        NSArray * loadedUsers = [GRAGithubRequest loadUsers];
+        
+        if (loadedUsers)
+        {
+            githubFriends = [loadedUsers mutableCopy];
+        }
+        
+        self.tableView.rowHeight = 100;
+        
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        
         
         
     }
@@ -196,7 +73,7 @@
 
     
     
-    UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 100)];
+    UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
     
     self.tableView.tableHeaderView = headerView;
     
@@ -204,7 +81,7 @@
     
     
     
-    search = [[UITextField alloc] initWithFrame:CGRectMake(screenWidth + 20, 35,220, 45.0)];
+    search = [[UITextField alloc] initWithFrame:CGRectMake(screenWidth + 20, 10,220, 45.0)];
     search.backgroundColor = [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.0f];
     search.autocapitalizationType = UITextAutocapitalizationTypeNone;
     search.autocapitalizationType = UITextAutocorrectionTypeNo;
@@ -219,32 +96,18 @@
     
     search.delegate = self;
     
-    [self.view addSubview:search];
+    [headerView addSubview:search];
     
     
     
-//    find = [[UIButton alloc]initWithFrame:CGRectMake(screenWidth + 260.0, 30, 50.0, 50)];
-//    find.backgroundColor = [UIColor lightGrayColor];
-//    [find setTitle:@"?" forState:UIControlStateNormal];
-//    [find addTarget:self action:@selector(findButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
-//    find.layer.cornerRadius = 25;
-//    [self.view addSubview:find];
+
     
     
     find = [UIButton buttonWithType:UIButtonTypeCustom];
-    find.frame = CGRectMake(screenWidth + 260.0, 30, 50.0, 50);
+    find.frame = CGRectMake(screenWidth + 260.0, 12, 40.0, 40);
     [find setBackgroundImage:[UIImage imageNamed:@"searchButton.png"] forState:UIControlStateNormal];
-    //        [btn addTarget:self action:@selector(btnSendComment_pressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:find];
-
-//    UIButton * buttonPad = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
-//    find.rightView = buttonPad;
-    
-    
-    
-    
-    
-    
+    [find addTarget:self action:@selector(findButtonWasClicked) forControlEvents:UIControlEventTouchUpInside];
+    [headerView addSubview:find];
     
     
     
@@ -262,18 +125,32 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 
 
 
 -(void)findButtonWasClicked
 {
+    
+
+    
+    NSDictionary * userInfo = [GRAGithubRequest requestUserInfo:search.text];
+    
+    [githubFriends addObject:userInfo];
+    
+    [githubFriends insertObject:userInfo atIndex:0];
+    
+    [self.tableView reloadData];
+
     NSLog(@"findButton was clicked");
+    
+    [GRAGithubRequest saveUsers:githubFriends];
+    
+    search.text = @"";
 }
 
 
@@ -306,7 +183,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90;
+    return 100;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -323,7 +200,7 @@
     GFATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     
-
+ 
     
     if (cell == nil)
     {
@@ -334,6 +211,8 @@
     
     
     cell.friendInfo = githubFriends[indexPath.row];
+    cell.navigationController = self.navigationController;
+    
     cell.backgroundColor = [UIColor colorWithRed:0.184f green:0.184f blue:0.184f alpha:1.0f];
     
     
@@ -348,17 +227,17 @@
     
 }
 
--(void)profileButtonWasClicked
-{
-    
-    UINavigationController* sender = [[UINavigationController alloc]init];
-    
-    
-    sender.view.backgroundColor = [UIColor lightGrayColor];
-    
-    [self.navigationController pushViewController:sender animated:YES];
-    
-}
+//-(void)profileButtonWasClicked
+//{
+//    
+//    UINavigationController* sender = [[UINavigationController alloc]init];
+//    
+//    
+//    sender.view.backgroundColor = [UIColor lightGrayColor];
+//    
+//    [self.navigationController pushViewController:sender animated:YES];
+//    
+//}
 
 
 
@@ -382,27 +261,29 @@
 
 
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        
+        [githubFriends removeObjectAtIndex:indexPath.row];
+        [GRAGithubRequest saveUsers:githubFriends];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

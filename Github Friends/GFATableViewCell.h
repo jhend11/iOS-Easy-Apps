@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol UINavigationControllerDelegate;
+@protocol GFATableViewCellDeglegate;
 @interface GFATableViewCell : UITableViewCell
 @property (nonatomic) NSDictionary * friendInfo;
 @property (nonatomic) UIWebView * url;
 @property (retain, nonatomic) IBOutlet UIButton *profileArrow;
 @property (nonatomic) UINavigationController * navigationController;
-//@property (nonatomic, weak) id<UINavigationControllerDelegate> delegate;
+
+
 
 
 
 @end
+
+
+

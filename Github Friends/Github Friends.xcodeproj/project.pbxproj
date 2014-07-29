@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42C2B341986A08B00B71D57 /* GRAGithubRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C2B331986A08B00B71D57 /* GRAGithubRequest.m */; };
+		B42C2B391986D4A800B71D57 /* GFAViewController2222222.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C2B381986D4A800B71D57 /* GFAViewController2222222.m */; };
 		B48359D81982A7ED0052409E /* GFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48359D71982A7ED0052409E /* GFAViewController.m */; };
 		B48359DA1982D3150052409E /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B48359D91982D3150052409E /* downArrow.png */; };
 		B48359DF1982D9840052409E /* profileArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B48359DC1982D9840052409E /* profileArrow.png */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B42C2B321986A08B00B71D57 /* GRAGithubRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRAGithubRequest.h; path = "../Github Request/GRAGithubRequest.h"; sourceTree = "<group>"; };
+		B42C2B331986A08B00B71D57 /* GRAGithubRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRAGithubRequest.m; path = "../Github Request/GRAGithubRequest.m"; sourceTree = "<group>"; };
+		B42C2B371986D4A800B71D57 /* GFAViewController2222222.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFAViewController2222222.h; sourceTree = "<group>"; };
+		B42C2B381986D4A800B71D57 /* GFAViewController2222222.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFAViewController2222222.m; sourceTree = "<group>"; };
 		B48359D61982A7ED0052409E /* GFAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFAViewController.h; sourceTree = "<group>"; };
 		B48359D71982A7ED0052409E /* GFAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFAViewController.m; sourceTree = "<group>"; };
 		B48359D91982D3150052409E /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = downArrow.png; path = ../../../Downloads/githubFriends/downArrow.png; sourceTree = "<group>"; };
@@ -91,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B42C2B351986A09B00B71D57 /* GitHubRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B42C2B321986A08B00B71D57 /* GRAGithubRequest.h */,
+				B42C2B331986A08B00B71D57 /* GRAGithubRequest.m */,
+			);
+			name = GitHubRequest;
+			sourceTree = "<group>";
+		};
 		B48359DB1982D57D0052409E /* Pics */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +192,9 @@
 		B4D1160519813EF500AE248F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B42C2B371986D4A800B71D57 /* GFAViewController2222222.h */,
+				B42C2B381986D4A800B71D57 /* GFAViewController2222222.m */,
+				B42C2B351986A09B00B71D57 /* GitHubRequest */,
 				B4D1160619813F9600AE248F /* GFATableViewController.h */,
 				B4D1160719813F9600AE248F /* GFATableViewController.m */,
 				B4D116091981481300AE248F /* GFATableViewCell.h */,
@@ -235,6 +253,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Joshua Hendershot";
 				TargetAttributes = {
+					B4D115D219813EEE00AE248F = {
+						DevelopmentTeam = BN9F9Y233Y;
+					};
 					B4D115ED19813EEE00AE248F = {
 						TestTargetID = B4D115D219813EEE00AE248F;
 					};
@@ -287,11 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42C2B391986D4A800B71D57 /* GFAViewController2222222.m in Sources */,
 				B48359D81982A7ED0052409E /* GFAViewController.m in Sources */,
 				B4D1160819813F9600AE248F /* GFATableViewController.m in Sources */,
 				B4D115E319813EEE00AE248F /* main.m in Sources */,
 				B4D1160B1981481300AE248F /* GFATableViewCell.m in Sources */,
 				B4D115E719813EEE00AE248F /* GFAAppDelegate.m in Sources */,
+				B42C2B341986A08B00B71D57 /* GRAGithubRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,10 +431,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Github Friends/Github Friends-Prefix.pch";
 				INFOPLIST_FILE = "Github Friends/Github Friends-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -421,10 +447,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Github Friends/Github Friends-Prefix.pch";
 				INFOPLIST_FILE = "Github Friends/Github Friends-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

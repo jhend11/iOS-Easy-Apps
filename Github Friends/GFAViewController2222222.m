@@ -1,21 +1,22 @@
 //
-//  GFAViewController.m
+//  GFAViewController2222222.m
 //  Github Friends
 //
-//  Created by JOSH HENDERSHOT on 7/25/14.
+//  Created by JOSH HENDERSHOT on 7/28/14.
 //  Copyright (c) 2014 Joshua Hendershot. All rights reserved.
 //
 
-#import "GFAViewController.h"
+#import "GFAViewController2222222.h"
 
-@interface GFAViewController ()
+@interface GFAViewController2222222 ()
 
 @end
 
-@implementation GFAViewController
+@implementation GFAViewController2222222
+
+
 
 UIWebView * webView;
-
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -24,38 +25,31 @@ UIWebView * webView;
     if (self) {
         // Custom initialization
         
+        
         webView = [[UIWebView alloc]initWithFrame:self.view.frame];
-
+        
         [self.view  addSubview:webView];
-       
+        
     }
     return self;
 }
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
-
-
-
 
 
 -(void)setFriendInfo:(NSDictionary *)friendInfo
 {
     _friendInfo = friendInfo;
     
-    
-    NSURL * url = [NSURL URLWithString:self.friendInfo[@"html_url"]];
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"https://gist.github.com/%@",self.friendInfo[@"login"]]];
     
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
-    [self.view  addSubview:webView];
 }
-
 
 
 
