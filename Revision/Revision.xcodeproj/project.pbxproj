@@ -19,6 +19,7 @@
 		B466A3B51993A3DA000FFC71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B466A39D1993A3DA000FFC71 /* UIKit.framework */; };
 		B466A3BD1993A3DA000FFC71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B466A3BB1993A3DA000FFC71 /* InfoPlist.strings */; };
 		B466A3BF1993A3DA000FFC71 /* RevisionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B466A3BE1993A3DA000FFC71 /* RevisionTests.m */; };
+		B466A3CA1993AAFD000FFC71 /* REVCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = B466A3C91993AAFD000FFC71 /* REVCalc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		B466A3BA1993A3DA000FFC71 /* RevisionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RevisionTests-Info.plist"; sourceTree = "<group>"; };
 		B466A3BC1993A3DA000FFC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B466A3BE1993A3DA000FFC71 /* RevisionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RevisionTests.m; sourceTree = "<group>"; };
+		B466A3C81993AAFD000FFC71 /* REVCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVCalc.h; sourceTree = "<group>"; };
+		B466A3C91993AAFD000FFC71 /* REVCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVCalc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		B466A39F1993A3DA000FFC71 /* Revision */ = {
 			isa = PBXGroup;
 			children = (
+				B466A3C81993AAFD000FFC71 /* REVCalc.h */,
+				B466A3C91993AAFD000FFC71 /* REVCalc.m */,
 				B466A3A81993A3DA000FFC71 /* REVAppDelegate.h */,
 				B466A3A91993A3DA000FFC71 /* REVAppDelegate.m */,
 				B466A3AB1993A3DA000FFC71 /* Images.xcassets */,
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B466A3CA1993AAFD000FFC71 /* REVCalc.m in Sources */,
 				B466A3AA1993A3DA000FFC71 /* REVAppDelegate.m in Sources */,
 				B466A3A61993A3DA000FFC71 /* main.m in Sources */,
 			);

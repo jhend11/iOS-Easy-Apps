@@ -11,5 +11,12 @@
 @interface REVAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+-(void)doSomething1
+{
+    
+}
++(void)doSomething2
+{
+    
+}
 @end

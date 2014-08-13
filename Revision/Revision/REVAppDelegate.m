@@ -7,11 +7,14 @@
 //
 
 #import "REVAppDelegate.h"
+#import "REVCalc.m"
 
 @implementation REVAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self playWithTheCalculator];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -19,6 +22,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+-(void)playWithTheCalculator
+{
+    REVCalc * calc = [[REVCalc alloc]init];
+    [calc doSomething1];
+    
+    [REVCalc doSomething2];
 }
 
 

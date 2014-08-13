@@ -26,9 +26,18 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testForLoops
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    int sum = 0;
+    
+    for (int i=0; i < 5; i++)
+    {
+        sum = sum + i;
+    }
+//    NSLog(@"Hello, World %d", sum);
+    
+    XCTAssertEqual(sum, 10, @"testing sum of ints");
+
 }
 
 @end
