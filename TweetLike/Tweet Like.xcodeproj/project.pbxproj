@@ -23,6 +23,7 @@
 		B4169F441998FB2500B2A9A6 /* TLATweetsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F431998FB2500B2A9A6 /* TLATweetsTVC.m */; };
 		B4169F481998FF7400B2A9A6 /* TLATweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F471998FF7400B2A9A6 /* TLATweetCell.m */; };
 		B4169F4B1999058000B2A9A6 /* TLANewTweetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F4A1999058000B2A9A6 /* TLANewTweetVC.m */; };
+		B492AEEF199CE630000CFCD7 /* TLAViewTweetController.m in Sources */ = {isa = PBXBuildFile; fileRef = B492AEEE199CE630000CFCD7 /* TLAViewTweetController.m */; };
 		B498487D19991F31005E5BCE /* header_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B498487C19991F31005E5BCE /* header_logo.png */; };
 		B498487F199933FB005E5BCE /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B498487E199933FB005E5BCE /* swipe_button.png */; };
 		B498488119993408005E5BCE /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B498488019993408005E5BCE /* heart.png */; };
@@ -76,6 +77,8 @@
 		B4169F471998FF7400B2A9A6 /* TLATweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLATweetCell.m; sourceTree = "<group>"; };
 		B4169F491999058000B2A9A6 /* TLANewTweetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLANewTweetVC.h; sourceTree = "<group>"; };
 		B4169F4A1999058000B2A9A6 /* TLANewTweetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLANewTweetVC.m; sourceTree = "<group>"; };
+		B492AEED199CE630000CFCD7 /* TLAViewTweetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAViewTweetController.h; sourceTree = "<group>"; };
+		B492AEEE199CE630000CFCD7 /* TLAViewTweetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLAViewTweetController.m; sourceTree = "<group>"; };
 		B498487C19991F31005E5BCE /* header_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_logo.png; sourceTree = "<group>"; };
 		B498487E199933FB005E5BCE /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
 		B498488019993408005E5BCE /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 		B4169F411998FAEB00B2A9A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B492AEED199CE630000CFCD7 /* TLAViewTweetController.h */,
+				B492AEEE199CE630000CFCD7 /* TLAViewTweetController.m */,
 				B4169F421998FB2500B2A9A6 /* TLATweetsTVC.h */,
 				B4169F431998FB2500B2A9A6 /* TLATweetsTVC.m */,
 				B4169F491999058000B2A9A6 /* TLANewTweetVC.h */,
@@ -387,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B492AEEF199CE630000CFCD7 /* TLAViewTweetController.m in Sources */,
 				B4169F1D1998F82500B2A9A6 /* TLAAppDelegate.m in Sources */,
 				B4169F441998FB2500B2A9A6 /* TLATweetsTVC.m in Sources */,
 				B4169F191998F82500B2A9A6 /* main.m in Sources */,

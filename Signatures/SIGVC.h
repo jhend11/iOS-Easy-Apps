@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SIGVC : UIViewController
+@property (nonatomic) NSMutableArray * scribbles;
 
 @end

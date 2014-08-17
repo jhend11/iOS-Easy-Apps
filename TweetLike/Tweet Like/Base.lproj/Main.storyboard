@@ -111,7 +111,7 @@
                                     <outlet property="heartButton" destination="0DT-X1-Rkz" id="Zxo-vC-aj5"/>
                                     <outlet property="heartCountLabel" destination="qVS-XG-3qL" id="Bce-U9-eTK"/>
                                     <outlet property="tweetTextView" destination="pWj-0H-er4" id="RGJ-0b-Jez"/>
-                                    <segue destination="fz7-1c-Voh" kind="push" id="OGb-CX-Fgc"/>
+                                    <segue destination="fz7-1c-Voh" kind="push" identifier="viewTweetController" id="OGb-CX-Fgc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="524" y="22"/>
         </scene>
-        <!--View Controller-->
+        <!--View Tweet Controller-->
         <scene sceneID="iYW-pN-seo">
             <objects>
-                <viewController id="fz7-1c-Voh" sceneMemberID="viewController">
+                <viewController id="fz7-1c-Voh" customClass="TLAViewTweetController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MnI-kO-02c"/>
                         <viewControllerLayoutGuide type="bottom" id="7in-cH-XjA"/>
@@ -143,10 +143,22 @@
                     <view key="view" contentMode="scaleToFill" id="Rgv-uT-FKT">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvR-vL-XKi">
+                                <rect key="frame" x="44" y="42" width="233" height="199"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.69383217934574937" green="1" blue="0.73321689778493004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ran-1I-RY3"/>
                     <keyCommands/>
+                    <connections>
+                        <outlet property="viewTweetTextBox" destination="kvR-vL-XKi" id="jV0-CH-pnB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igf-R6-kKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

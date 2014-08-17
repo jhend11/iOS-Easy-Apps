@@ -10,6 +10,7 @@
 #import "TLATweetCell.h"
 #import "TLANewTweetVC.h"
 #import "AFNetworking.h"
+#import "TLAViewTweetController.h"
 #import <Parse/Parse.h>
 
 @interface TLATweetsTVC ()<TLATweetCellDelegate>
@@ -231,6 +232,15 @@
     TLANewTweetVC * newTweetVC = segue.destinationViewController;
     
     newTweetVC.tweets = tweetLikes;
+    }
+    else
+    {
+        NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
+        TLAViewTweetController * viewTweet = segue.destinationViewController;
+        viewTweet.tweet = tweetLikes [indexPath.row];
+        
+        
+        
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

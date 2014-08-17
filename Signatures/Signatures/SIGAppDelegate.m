@@ -16,9 +16,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    SIGVC * rVC = [[SIGVC alloc]init];
+    
     self.window.rootViewController = [[SIGVC alloc]init];
-    self.window.rootViewController = rVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

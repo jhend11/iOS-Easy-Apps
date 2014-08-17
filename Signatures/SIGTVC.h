@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SIGView.h"
 
 @interface SIGTVC : UITableViewController
 

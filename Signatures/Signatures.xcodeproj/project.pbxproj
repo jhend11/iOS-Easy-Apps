@@ -21,6 +21,9 @@
 		B43BA78F199BDCB5006D7280 /* SignaturesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43BA78E199BDCB5006D7280 /* SignaturesTests.m */; };
 		B43BA79B199BDD06006D7280 /* SIGTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43BA79A199BDD06006D7280 /* SIGTVC.m */; };
 		B43BA79E199BDE3F006D7280 /* SIGVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43BA79D199BDE3F006D7280 /* SIGVC.m */; };
+		B43BA7A3199BE78A006D7280 /* SIGView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43BA7A2199BE78A006D7280 /* SIGView.m */; };
+		B43BA7A6199BF224006D7280 /* SIGTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43BA7A5199BF224006D7280 /* SIGTVCell.m */; };
+		B43BA7A9199BFD36006D7280 /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = B43BA7A8199BFD36006D7280 /* Group.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,11 @@
 		B43BA79A199BDD06006D7280 /* SIGTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGTVC.m; sourceTree = "<group>"; };
 		B43BA79C199BDE3F006D7280 /* SIGVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGVC.h; sourceTree = "<group>"; };
 		B43BA79D199BDE3F006D7280 /* SIGVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGVC.m; sourceTree = "<group>"; };
+		B43BA7A1199BE78A006D7280 /* SIGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGView.h; sourceTree = "<group>"; };
+		B43BA7A2199BE78A006D7280 /* SIGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGView.m; sourceTree = "<group>"; };
+		B43BA7A4199BF224006D7280 /* SIGTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGTVCell.h; sourceTree = "<group>"; };
+		B43BA7A5199BF224006D7280 /* SIGTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGTVCell.m; sourceTree = "<group>"; };
+		B43BA7A8199BFD36006D7280 /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Group.png; path = ../../../Desktop/Group.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,8 @@
 		B43BA75D199BDCB5006D7280 = {
 			isa = PBXGroup;
 			children = (
+				B43BA7A7199BFD26006D7280 /* Pics */,
+				B43BA79F199BE529006D7280 /* RootViewController */,
 				B43BA798199BDCBD006D7280 /* Controllers */,
 				B43BA76F199BDCB5006D7280 /* Signatures */,
 				B43BA788199BDCB5006D7280 /* SignaturesTests */,
@@ -154,12 +164,39 @@
 		B43BA798199BDCBD006D7280 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B43BA79C199BDE3F006D7280 /* SIGVC.h */,
-				B43BA79D199BDE3F006D7280 /* SIGVC.m */,
 				B43BA799199BDD06006D7280 /* SIGTVC.h */,
 				B43BA79A199BDD06006D7280 /* SIGTVC.m */,
+				B43BA7A4199BF224006D7280 /* SIGTVCell.h */,
+				B43BA7A5199BF224006D7280 /* SIGTVCell.m */,
+				B43BA7A0199BE763006D7280 /* Draw Views */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B43BA79F199BE529006D7280 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B43BA79C199BDE3F006D7280 /* SIGVC.h */,
+				B43BA79D199BDE3F006D7280 /* SIGVC.m */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		B43BA7A0199BE763006D7280 /* Draw Views */ = {
+			isa = PBXGroup;
+			children = (
+				B43BA7A1199BE78A006D7280 /* SIGView.h */,
+				B43BA7A2199BE78A006D7280 /* SIGView.m */,
+			);
+			name = "Draw Views";
+			sourceTree = "<group>";
+		};
+		B43BA7A7199BFD26006D7280 /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				B43BA7A8199BFD36006D7280 /* Group.png */,
+			);
+			name = Pics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B43BA774199BDCB5006D7280 /* InfoPlist.strings in Resources */,
+				B43BA7A9199BFD36006D7280 /* Group.png in Resources */,
 				B43BA77C199BDCB5006D7280 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,10 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43BA7A3199BE78A006D7280 /* SIGView.m in Sources */,
 				B43BA79B199BDD06006D7280 /* SIGTVC.m in Sources */,
 				B43BA77A199BDCB5006D7280 /* SIGAppDelegate.m in Sources */,
 				B43BA79E199BDE3F006D7280 /* SIGVC.m in Sources */,
 				B43BA776199BDCB5006D7280 /* main.m in Sources */,
+				B43BA7A6199BF224006D7280 /* SIGTVCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +498,7 @@
 				B43BA794199BDCB5006D7280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B43BA795199BDCB5006D7280 /* Build configuration list for PBXNativeTarget "SignaturesTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +507,7 @@
 				B43BA797199BDCB5006D7280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
