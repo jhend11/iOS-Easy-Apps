@@ -10,6 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface MSARequest : NSObject
-+(void)findMayorshipsWithLocation:(CLLocation *)location;
-+(NSArray*)findVenuesWithLocation:(CLLocation*)location;
++(void)findMayorshipsWithLocation:(CLLocation *)location completion:(void(^)(NSArray* mayors))completion;
++(void)findVenuesWithLocation:(CLLocation *)location completion:(void (^)(NSArray * venues))completion;
 @end

@@ -15,48 +15,69 @@
 //  venues/search?ll=40.7,-74&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=YYYYMMDD
 
 @implementation MSARequest
-+(void)findMayorshipsWithLocation:(CLLocation *)location
+//+(void)findMayorshipsWithLocation:(CLLocation *)location
++(void)findMayorshipsWithLocation:(CLLocation *)location completion:(void (^)(NSArray * mayors))completion
 {
-    NSArray * venues = [MSARequest findVenuesWithLocation:location];
-    
-    NSMutableArray * mayors = [@[] mutableCopy];
-    NSMutableArray * noMayors = [@[] mutableCopy];
-
-    
-    for (NSDictionary * venue in venues)
+   [MSARequest findVenuesWithLocation:location completion:^(NSArray *venues)
     {
-        NSString * endpoint = [NSString stringWithFormat:@"venues/%@",venue [@"id"]];
-        NSDictionary * venueInfo = [MSARequest fourSquareRequestWithEndpoint:endpoint andParameters:@{}];
-        NSDictionary * mayor = venueInfo[@"response"][@"venue"][@"mayor"];
-        
-        if (!mayor[@"user"])
-        {
-            [noMayors addObject:venueInfo];
-            
-        }
-        else
-        {
-            [mayors addObject:venueInfo];
+       NSMutableArray * mayors = [@[] mutableCopy];
+       NSMutableArray * noMayors = [@[] mutableCopy];
+       
+       
+       for (NSDictionary * venue in venues)
+       {
+           NSString * endpoint = [NSString stringWithFormat:@"venues/%@",venue [@"id"]];
+           //        NSDictionary * venueInfo = [MSARequest fourSquareRequestWithEndpoint:endpoint andParameters:@{}];
+           [MSARequest fourSquareRequestWithEndpoint:endpoint andParameters:@{} completion:^(NSDictionary *responseInfo)
+            {
+               
+               NSDictionary * mayor = responseInfo[@"response"][@"venue"][@"mayor"];
+               
+               if (!mayor[@"user"])
+               {
+                   [noMayors addObject:responseInfo];
+                   
+               }
+               else
+               {
+                   [mayors addObject:mayor];
 
-        }
-    }
+               }
+            
+                if (completion) completion(mayors);
+                
+                [MSAData mainData].venuesWithoutMayors = [noMayors copy];
+                [MSAData mainData].venuesWithMayors = [mayors copy];
+                
+                
+                NSLog(@"%@", [MSAData mainData].venuesWithoutMayors);
+
+               //            [mayors addObject:mayor];
+           }];
+           
+           
+           
+       }
+        
+    }];
     
-    [MSAData mainData].venuesWithoutMayors = [noMayors copy];
-    [MSAData mainData].venuesWithMayors = [mayors copy];
-    
-    NSLog(@"%@", [MSAData mainData].venuesWithoutMayors);
+   
 
 }
 
-+(NSArray *)findVenuesWithLocation:(CLLocation *)location
++(void)findVenuesWithLocation:(CLLocation *)location completion:(void (^)(NSArray * venues))completion
 {
     NSDictionary * parameters = @{
                                   @"ll":[NSString stringWithFormat:@"%f,%f",location.coordinate.latitude, location.coordinate.longitude]
                                       };
-    return [MSARequest fourSquareRequestWithEndpoint:@"venues/search" andParameters:parameters][@"response"][@"venues"];
+    [MSARequest fourSquareRequestWithEndpoint:@"venues/search" andParameters:parameters completion:^(NSDictionary *responseInfo)
+    {
+        if (completion) completion(responseInfo[@"response"][@"venues"]);
+    }];
+//    return [MSARequest fourSquareRequestWithEndpoint:@"venues/search" andParameters:parameters][@"response"][@"venues"];
 }
 
-+(NSDictionary*)fourSquareRequestWithEndpoint:(NSString*)endpoint andParameters: (NSDictionary*)parameters
++(void)fourSquareRequestWithEndpoint:(NSString*)endpoint andParameters: (NSDictionary*)parameters completion:(void(^)(NSDictionary * responseInfo))completion
 {
     NSMutableString * requestString = [[API stringByAppendingString:endpoint]mutableCopy];
     
@@ -80,10 +101,17 @@
     
     NSURL * requestURL = [NSURL URLWithString:requestString];
     NSURLRequest * request = [NSURLRequest requestWithURL:requestURL];
-    NSData * responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSDictionary * responseInfo = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-    NSLog(@"%@",responseInfo);
-    return responseInfo;
+//    NSData * responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+    {
+        NSDictionary * responseInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+       if (completion) completion(responseInfo);
+        
+
+    }];
+//    NSLog(@"%@",responseInfo);
+//    return responseInfo;
 }
 
 @end

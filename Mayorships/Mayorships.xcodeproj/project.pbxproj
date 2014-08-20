@@ -24,6 +24,7 @@
 		B4DD2E4919A38718006B2358 /* MayorshipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DD2E4819A38718006B2358 /* MayorshipsTests.m */; };
 		B4DD2E5419A38C96006B2358 /* MSARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DD2E5319A38C96006B2358 /* MSARequest.m */; };
 		B4DD2E5819A3D5EC006B2358 /* MSAData.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DD2E5719A3D5EC006B2358 /* MSAData.m */; };
+		B4DD2E5A19A4DCB4006B2358 /* game@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4DD2E5919A4DCB4006B2358 /* game@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B4DD2E5319A38C96006B2358 /* MSARequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSARequest.m; sourceTree = "<group>"; };
 		B4DD2E5619A3D5EC006B2358 /* MSAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAData.h; sourceTree = "<group>"; };
 		B4DD2E5719A3D5EC006B2358 /* MSAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAData.m; sourceTree = "<group>"; };
+		B4DD2E5919A4DCB4006B2358 /* game@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "game@2x.png"; path = "../../../Desktop/game@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		B4DD2E0E19A38718006B2358 = {
 			isa = PBXGroup;
 			children = (
+				B4DD2E5919A4DCB4006B2358 /* game@2x.png */,
 				B4DD2E5519A3D59F006B2358 /* Singleton */,
 				B4DD2E5219A38C96006B2358 /* MSARequest.h */,
 				B4DD2E5319A38C96006B2358 /* MSARequest.m */,
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DD2E3619A38718006B2358 /* Images.xcassets in Resources */,
+				B4DD2E5A19A4DCB4006B2358 /* game@2x.png in Resources */,
 				B4DD2E2519A38718006B2358 /* InfoPlist.strings in Resources */,
 				B4DD2E2E19A38718006B2358 /* Main.storyboard in Resources */,
 			);
@@ -483,6 +487,7 @@
 				B4DD2E4E19A38718006B2358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4DD2E4F19A38718006B2358 /* Build configuration list for PBXNativeTarget "MayorshipsTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				B4DD2E5119A38718006B2358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

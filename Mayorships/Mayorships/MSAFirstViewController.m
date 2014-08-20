@@ -35,14 +35,19 @@
 {
     CLLocation * location = locations[0];
     [locationManager stopUpdatingLocation];
-    [MSARequest findMayorshipsWithLocation:location];
-    [self.mayorList reloadData];
+    [MSARequest findMayorshipsWithLocation:location completion:^(NSArray * mayors)
+    {
+        mayorships = mayors;
+        [self.mayorList reloadData];
+        
+    }];
+    
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return mayorships.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,12 +56,44 @@
     NSDictionary * mayor = mayorships[indexPath.row];
     cell.textLabel.text = mayor[@"user"][@"firstName"];
     
-    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"https://irs2.4sqi.net/img/user/100x100%@", mayor[@"user"][@"photo"][@"suffix"]]];
-    NSData * data = [NSData dataWithContentsOfURL:url];
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@100x100%@",mayor[@"user"][@"photo"][@"prefix"], mayor[@"user"][@"photo"][@"suffix"]]];
     
-    UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 30, 30)];
-    button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithData:data]];
-    [cell addSubview:button];
+    NSString * documentDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    
+    NSString * filePath = [documentDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", mayor[@"user"][@"id"]]];
+    
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
+    
+    if (!fileExists)
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            
+            NSData * data = [NSData dataWithContentsOfURL:url];
+            
+            NSLog(@"file request : %@", url);
+            
+            [data writeToFile:filePath atomically:YES];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                cell.imageView.image = [UIImage imageWithData:data];
+                
+            });
+            
+        });
+    } else {
+        cell.imageView.image = [UIImage imageWithContentsOfFile:filePath];
+    }
+    
+    
+    
+  
+    
+    
+    
+//    UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(5, 5, 30, 30)];
+//    button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithData:data]];
+//    [cell addSubview:button];
     
 
     return cell;
