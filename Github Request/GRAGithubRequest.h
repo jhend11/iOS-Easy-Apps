@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GRAGithubRequest : NSObject
-+(NSDictionary*)requestUserInfo:(NSString*)userName;
 
-+(void)saveUsers:(NSArray*)users;
-+(NSArray *)loadUsers;
 
 
 @end
