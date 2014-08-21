@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     println("i've got an image");
     }
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var imageView: UIImageView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -38,17 +38,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func takePhoto(sender: UIButton)
     {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
             println("Button capture")
             
             var imag = UIImagePickerController()
             imag.delegate = self
-            imag.sourceType = UIImagePickerControllerSourceType.Camera;
+            
+//            imag.showsCameraControls = false
+        
+            imag.sourceType = UIImagePickerControllerSourceType.Camera
 //            imagePicker.mediaTypes = NSArray(object: kUTTypeImage)
+            imag.cameraDevice = UIImagePickerControllerCameraDevice.Front
             imag.allowsEditing = false
             
             self.presentViewController(imag, animated: true, completion: nil);
-        }
+            
+//        }
     }
     
     @IBAction func choosePhotos(sender: UIButton)
@@ -64,6 +69,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             self.presentViewController(imag, animated: true, completion: nil);
         }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!)
+    {
+        
+        picker.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+        
+        imageView = UIImageView(frame: self.view.frame)
+        
+        let newInfo = info as NSDictionary
+        
+        print(newInfo)
+        
+        let image = newInfo.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
+        
+        print(imageView)
+        
+        imageView.image  = image
+        
     }
 }
 
