@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4169F0D1998F82500B2A9A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4169F0C1998F82500B2A9A6 /* Foundation.framework */; };
+		B4169F0F1998F82500B2A9A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4169F0E1998F82500B2A9A6 /* CoreGraphics.framework */; };
+		B4169F111998F82500B2A9A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4169F101998F82500B2A9A6 /* UIKit.framework */; };
+		B4169F171998F82500B2A9A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4169F151998F82500B2A9A6 /* InfoPlist.strings */; };
+		B4169F191998F82500B2A9A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F181998F82500B2A9A6 /* main.m */; };
+		B4169F1D1998F82500B2A9A6 /* TLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F1C1998F82500B2A9A6 /* TLAAppDelegate.m */; };
+		B4169F201998F82500B2A9A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4169F1E1998F82500B2A9A6 /* Main.storyboard */; };
+		B4169F251998F82500B2A9A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4169F241998F82500B2A9A6 /* Images.xcassets */; };
+		B4169F2C1998F82500B2A9A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4169F2B1998F82500B2A9A6 /* XCTest.framework */; };
+		B4169F2D1998F82500B2A9A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4169F0C1998F82500B2A9A6 /* Foundation.framework */; };
+		B4169F2E1998F82500B2A9A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4169F101998F82500B2A9A6 /* UIKit.framework */; };
+		B4169F361998F82500B2A9A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4169F341998F82500B2A9A6 /* InfoPlist.strings */; };
+		B4169F381998F82500B2A9A6 /* Tweet_LikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F371998F82500B2A9A6 /* Tweet_LikeTests.m */; };
+		B4169F441998FB2500B2A9A6 /* TLATweetsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F431998FB2500B2A9A6 /* TLATweetsTVC.m */; };
+		B4169F481998FF7400B2A9A6 /* TLATweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F471998FF7400B2A9A6 /* TLATweetCell.m */; };
+		B4169F4B1999058000B2A9A6 /* TLANewTweetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4169F4A1999058000B2A9A6 /* TLANewTweetVC.m */; };
+		B492AEEF199CE630000CFCD7 /* TLAViewTweetController.m in Sources */ = {isa = PBXBuildFile; fileRef = B492AEEE199CE630000CFCD7 /* TLAViewTweetController.m */; };
+		B498487D19991F31005E5BCE /* header_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B498487C19991F31005E5BCE /* header_logo.png */; };
+		B498487F199933FB005E5BCE /* swipe_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B498487E199933FB005E5BCE /* swipe_button.png */; };
+		B498488119993408005E5BCE /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B498488019993408005E5BCE /* heart.png */; };
+		B4984884199A6DA1005E5BCE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984883199A6DA1005E5BCE /* Parse.framework */; };
+		B4984886199A6DF6005E5BCE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984885199A6DF6005E5BCE /* AudioToolbox.framework */; };
+		B4984888199A6E09005E5BCE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984887199A6E09005E5BCE /* CFNetwork.framework */; };
+		B498488A199A6E2D005E5BCE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984889199A6E2D005E5BCE /* CoreLocation.framework */; };
+		B498488C199A6E37005E5BCE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B498488B199A6E37005E5BCE /* libz.dylib */; };
+		B498488E199A6E42005E5BCE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498488D199A6E42005E5BCE /* MobileCoreServices.framework */; };
+		B4984890199A6E4B005E5BCE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498488F199A6E4B005E5BCE /* QuartzCore.framework */; };
+		B4984892199A6E55005E5BCE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984891199A6E55005E5BCE /* Security.framework */; };
+		B4984894199A6E62005E5BCE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984893199A6E62005E5BCE /* StoreKit.framework */; };
+		B4984896199A6E6E005E5BCE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984895199A6E6E005E5BCE /* SystemConfiguration.framework */; };
+		B4984898199A6FED005E5BCE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984897199A6FED005E5BCE /* Social.framework */; };
+		B498489A199A70F9005E5BCE /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4984899199A70F9005E5BCE /* Accounts.framework */; };
+		D2DE9BC98DCF4E20841E09D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDD2C0A2F924D8097D99C55 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4169F2F1998F82500B2A9A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4169F011998F82500B2A9A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4169F081998F82500B2A9A6;
+			remoteInfo = "Tweet Like";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DDD2C0A2F924D8097D99C55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4169F091998F82500B2A9A6 /* Tweet Like.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet Like.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4169F0C1998F82500B2A9A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B4169F0E1998F82500B2A9A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B4169F101998F82500B2A9A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B4169F141998F82500B2A9A6 /* Tweet Like-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tweet Like-Info.plist"; sourceTree = "<group>"; };
+		B4169F161998F82500B2A9A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B4169F181998F82500B2A9A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4169F1A1998F82500B2A9A6 /* Tweet Like-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet Like-Prefix.pch"; sourceTree = "<group>"; };
+		B4169F1B1998F82500B2A9A6 /* TLAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAAppDelegate.h; sourceTree = "<group>"; };
+		B4169F1C1998F82500B2A9A6 /* TLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLAAppDelegate.m; sourceTree = "<group>"; };
+		B4169F1F1998F82500B2A9A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4169F241998F82500B2A9A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B4169F2A1998F82500B2A9A6 /* Tweet LikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tweet LikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4169F2B1998F82500B2A9A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B4169F331998F82500B2A9A6 /* Tweet LikeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tweet LikeTests-Info.plist"; sourceTree = "<group>"; };
+		B4169F351998F82500B2A9A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B4169F371998F82500B2A9A6 /* Tweet_LikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tweet_LikeTests.m; sourceTree = "<group>"; };
+		B4169F421998FB2500B2A9A6 /* TLATweetsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLATweetsTVC.h; sourceTree = "<group>"; };
+		B4169F431998FB2500B2A9A6 /* TLATweetsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLATweetsTVC.m; sourceTree = "<group>"; };
+		B4169F461998FF7400B2A9A6 /* TLATweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLATweetCell.h; sourceTree = "<group>"; };
+		B4169F471998FF7400B2A9A6 /* TLATweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLATweetCell.m; sourceTree = "<group>"; };
+		B4169F491999058000B2A9A6 /* TLANewTweetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLANewTweetVC.h; sourceTree = "<group>"; };
+		B4169F4A1999058000B2A9A6 /* TLANewTweetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLANewTweetVC.m; sourceTree = "<group>"; };
+		B492AEED199CE630000CFCD7 /* TLAViewTweetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAViewTweetController.h; sourceTree = "<group>"; };
+		B492AEEE199CE630000CFCD7 /* TLAViewTweetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLAViewTweetController.m; sourceTree = "<group>"; };
+		B498487C19991F31005E5BCE /* header_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_logo.png; sourceTree = "<group>"; };
+		B498487E199933FB005E5BCE /* swipe_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_button.png; sourceTree = "<group>"; };
+		B498488019993408005E5BCE /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		B4984882199A4C1C005E5BCE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		B4984883199A6DA1005E5BCE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B4984885199A6DF6005E5BCE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B4984887199A6E09005E5BCE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B4984889199A6E2D005E5BCE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B498488B199A6E37005E5BCE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B498488D199A6E42005E5BCE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B498488F199A6E4B005E5BCE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B4984891199A6E55005E5BCE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B4984893199A6E62005E5BCE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B4984895199A6E6E005E5BCE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B4984897199A6FED005E5BCE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B4984899199A70F9005E5BCE /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EBFAA765A0014BEE8A1B6281 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4169F061998F82500B2A9A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B498489A199A70F9005E5BCE /* Accounts.framework in Frameworks */,
+				B4169F0D1998F82500B2A9A6 /* Foundation.framework in Frameworks */,
+				B4984898199A6FED005E5BCE /* Social.framework in Frameworks */,
+				B4984896199A6E6E005E5BCE /* SystemConfiguration.framework in Frameworks */,
+				B4984894199A6E62005E5BCE /* StoreKit.framework in Frameworks */,
+				B4984892199A6E55005E5BCE /* Security.framework in Frameworks */,
+				B4984890199A6E4B005E5BCE /* QuartzCore.framework in Frameworks */,
+				B498488E199A6E42005E5BCE /* MobileCoreServices.framework in Frameworks */,
+				B498488C199A6E37005E5BCE /* libz.dylib in Frameworks */,
+				B498488A199A6E2D005E5BCE /* CoreLocation.framework in Frameworks */,
+				B4984888199A6E09005E5BCE /* CFNetwork.framework in Frameworks */,
+				B4984886199A6DF6005E5BCE /* AudioToolbox.framework in Frameworks */,
+				B4169F0F1998F82500B2A9A6 /* CoreGraphics.framework in Frameworks */,
+				B4169F111998F82500B2A9A6 /* UIKit.framework in Frameworks */,
+				D2DE9BC98DCF4E20841E09D7 /* libPods.a in Frameworks */,
+				B4984884199A6DA1005E5BCE /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4169F271998F82500B2A9A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4169F2C1998F82500B2A9A6 /* XCTest.framework in Frameworks */,
+				B4169F2E1998F82500B2A9A6 /* UIKit.framework in Frameworks */,
+				B4169F2D1998F82500B2A9A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4169F001998F82500B2A9A6 = {
+			isa = PBXGroup;
+			children = (
+				B4984882199A4C1C005E5BCE /* Podfile */,
+				B498487B19991F14005E5BCE /* Images */,
+				B4169F411998FAEB00B2A9A6 /* Controllers */,
+				B4169F121998F82500B2A9A6 /* Tweet Like */,
+				B4169F311998F82500B2A9A6 /* Tweet LikeTests */,
+				B4169F0B1998F82500B2A9A6 /* Frameworks */,
+				B4169F0A1998F82500B2A9A6 /* Products */,
+				EBFAA765A0014BEE8A1B6281 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		B4169F0A1998F82500B2A9A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4169F091998F82500B2A9A6 /* Tweet Like.app */,
+				B4169F2A1998F82500B2A9A6 /* Tweet LikeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4169F0B1998F82500B2A9A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4984899199A70F9005E5BCE /* Accounts.framework */,
+				B4984897199A6FED005E5BCE /* Social.framework */,
+				B4984895199A6E6E005E5BCE /* SystemConfiguration.framework */,
+				B4984893199A6E62005E5BCE /* StoreKit.framework */,
+				B4984891199A6E55005E5BCE /* Security.framework */,
+				B498488F199A6E4B005E5BCE /* QuartzCore.framework */,
+				B498488D199A6E42005E5BCE /* MobileCoreServices.framework */,
+				B498488B199A6E37005E5BCE /* libz.dylib */,
+				B4984889199A6E2D005E5BCE /* CoreLocation.framework */,
+				B4984887199A6E09005E5BCE /* CFNetwork.framework */,
+				B4984885199A6DF6005E5BCE /* AudioToolbox.framework */,
+				B4984883199A6DA1005E5BCE /* Parse.framework */,
+				B4169F0C1998F82500B2A9A6 /* Foundation.framework */,
+				B4169F0E1998F82500B2A9A6 /* CoreGraphics.framework */,
+				B4169F101998F82500B2A9A6 /* UIKit.framework */,
+				B4169F2B1998F82500B2A9A6 /* XCTest.framework */,
+				6DDD2C0A2F924D8097D99C55 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4169F121998F82500B2A9A6 /* Tweet Like */ = {
+			isa = PBXGroup;
+			children = (
+				B4169F1B1998F82500B2A9A6 /* TLAAppDelegate.h */,
+				B4169F1C1998F82500B2A9A6 /* TLAAppDelegate.m */,
+				B4169F1E1998F82500B2A9A6 /* Main.storyboard */,
+				B4169F241998F82500B2A9A6 /* Images.xcassets */,
+				B4169F131998F82500B2A9A6 /* Supporting Files */,
+			);
+			path = "Tweet Like";
+			sourceTree = "<group>";
+		};
+		B4169F131998F82500B2A9A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4169F141998F82500B2A9A6 /* Tweet Like-Info.plist */,
+				B4169F151998F82500B2A9A6 /* InfoPlist.strings */,
+				B4169F181998F82500B2A9A6 /* main.m */,
+				B4169F1A1998F82500B2A9A6 /* Tweet Like-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4169F311998F82500B2A9A6 /* Tweet LikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4169F371998F82500B2A9A6 /* Tweet_LikeTests.m */,
+				B4169F321998F82500B2A9A6 /* Supporting Files */,
+			);
+			path = "Tweet LikeTests";
+			sourceTree = "<group>";
+		};
+		B4169F321998F82500B2A9A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4169F331998F82500B2A9A6 /* Tweet LikeTests-Info.plist */,
+				B4169F341998F82500B2A9A6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4169F411998FAEB00B2A9A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B492AEED199CE630000CFCD7 /* TLAViewTweetController.h */,
+				B492AEEE199CE630000CFCD7 /* TLAViewTweetController.m */,
+				B4169F421998FB2500B2A9A6 /* TLATweetsTVC.h */,
+				B4169F431998FB2500B2A9A6 /* TLATweetsTVC.m */,
+				B4169F491999058000B2A9A6 /* TLANewTweetVC.h */,
+				B4169F4A1999058000B2A9A6 /* TLANewTweetVC.m */,
+				B4169F451998FF4F00B2A9A6 /* Tweets TVC */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B4169F451998FF4F00B2A9A6 /* Tweets TVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4169F461998FF7400B2A9A6 /* TLATweetCell.h */,
+				B4169F471998FF7400B2A9A6 /* TLATweetCell.m */,
+			);
+			name = "Tweets TVC";
+			sourceTree = "<group>";
+		};
+		B498487B19991F14005E5BCE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B498488019993408005E5BCE /* heart.png */,
+				B498487E199933FB005E5BCE /* swipe_button.png */,
+				B498487C19991F31005E5BCE /* header_logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4169F081998F82500B2A9A6 /* Tweet Like */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4169F3B1998F82500B2A9A6 /* Build configuration list for PBXNativeTarget "Tweet Like" */;
+			buildPhases = (
+				E231B856725C4919B0EA1DF7 /* Check Pods Manifest.lock */,
+				B4169F051998F82500B2A9A6 /* Sources */,
+				B4169F061998F82500B2A9A6 /* Frameworks */,
+				B4169F071998F82500B2A9A6 /* Resources */,
+				E394B0C3AC4D4176934F68BF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tweet Like";
+			productName = "Tweet Like";
+			productReference = B4169F091998F82500B2A9A6 /* Tweet Like.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4169F291998F82500B2A9A6 /* Tweet LikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4169F3E1998F82500B2A9A6 /* Build configuration list for PBXNativeTarget "Tweet LikeTests" */;
+			buildPhases = (
+				B4169F261998F82500B2A9A6 /* Sources */,
+				B4169F271998F82500B2A9A6 /* Frameworks */,
+				B4169F281998F82500B2A9A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4169F301998F82500B2A9A6 /* PBXTargetDependency */,
+			);
+			name = "Tweet LikeTests";
+			productName = "Tweet LikeTests";
+			productReference = B4169F2A1998F82500B2A9A6 /* Tweet LikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4169F011998F82500B2A9A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TLA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joshua Hendershot";
+				TargetAttributes = {
+					B4169F291998F82500B2A9A6 = {
+						TestTargetID = B4169F081998F82500B2A9A6;
+					};
+				};
+			};
+			buildConfigurationList = B4169F041998F82500B2A9A6 /* Build configuration list for PBXProject "Tweet Like" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4169F001998F82500B2A9A6;
+			productRefGroup = B4169F0A1998F82500B2A9A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4169F081998F82500B2A9A6 /* Tweet Like */,
+				B4169F291998F82500B2A9A6 /* Tweet LikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4169F071998F82500B2A9A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B498487F199933FB005E5BCE /* swipe_button.png in Resources */,
+				B4169F251998F82500B2A9A6 /* Images.xcassets in Resources */,
+				B4169F171998F82500B2A9A6 /* InfoPlist.strings in Resources */,
+				B4169F201998F82500B2A9A6 /* Main.storyboard in Resources */,
+				B498488119993408005E5BCE /* heart.png in Resources */,
+				B498487D19991F31005E5BCE /* header_logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4169F281998F82500B2A9A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4169F361998F82500B2A9A6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E231B856725C4919B0EA1DF7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E394B0C3AC4D4176934F68BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4169F051998F82500B2A9A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AEEF199CE630000CFCD7 /* TLAViewTweetController.m in Sources */,
+				B4169F1D1998F82500B2A9A6 /* TLAAppDelegate.m in Sources */,
+				B4169F441998FB2500B2A9A6 /* TLATweetsTVC.m in Sources */,
+				B4169F191998F82500B2A9A6 /* main.m in Sources */,
+				B4169F481998FF7400B2A9A6 /* TLATweetCell.m in Sources */,
+				B4169F4B1999058000B2A9A6 /* TLANewTweetVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4169F261998F82500B2A9A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4169F381998F82500B2A9A6 /* Tweet_LikeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4169F301998F82500B2A9A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4169F081998F82500B2A9A6 /* Tweet Like */;
+			targetProxy = B4169F2F1998F82500B2A9A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4169F151998F82500B2A9A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4169F161998F82500B2A9A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B4169F1E1998F82500B2A9A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4169F1F1998F82500B2A9A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B4169F341998F82500B2A9A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4169F351998F82500B2A9A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4169F391998F82500B2A9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B4169F3A1998F82500B2A9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4169F3C1998F82500B2A9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFAA765A0014BEE8A1B6281 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tweet Like/Tweet Like-Prefix.pch";
+				INFOPLIST_FILE = "Tweet Like/Tweet Like-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B4169F3D1998F82500B2A9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFAA765A0014BEE8A1B6281 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tweet Like/Tweet Like-Prefix.pch";
+				INFOPLIST_FILE = "Tweet Like/Tweet Like-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B4169F3F1998F82500B2A9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tweet Like.app/Tweet Like";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tweet Like/Tweet Like-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tweet LikeTests/Tweet LikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B4169F401998F82500B2A9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tweet Like.app/Tweet Like";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tweet Like/Tweet Like-Prefix.pch";
+				INFOPLIST_FILE = "Tweet LikeTests/Tweet LikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4169F041998F82500B2A9A6 /* Build configuration list for PBXProject "Tweet Like" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4169F391998F82500B2A9A6 /* Debug */,
+				B4169F3A1998F82500B2A9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4169F3B1998F82500B2A9A6 /* Build configuration list for PBXNativeTarget "Tweet Like" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4169F3C1998F82500B2A9A6 /* Debug */,
+				B4169F3D1998F82500B2A9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4169F3E1998F82500B2A9A6 /* Build configuration list for PBXNativeTarget "Tweet LikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4169F3F1998F82500B2A9A6 /* Debug */,
+				B4169F401998F82500B2A9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4169F011998F82500B2A9A6 /* Project object */;
+}

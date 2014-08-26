@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B492AF8D199D7E76000CFCD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AF8C199D7E76000CFCD7 /* Foundation.framework */; };
+		B492AF8F199D7E76000CFCD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AF8E199D7E76000CFCD7 /* CoreGraphics.framework */; };
+		B492AF91199D7E76000CFCD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AF90199D7E76000CFCD7 /* UIKit.framework */; };
+		B492AF97199D7E76000CFCD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B492AF95199D7E76000CFCD7 /* InfoPlist.strings */; };
+		B492AF99199D7E76000CFCD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B492AF98199D7E76000CFCD7 /* main.m */; };
+		B492AF9D199D7E76000CFCD7 /* ROMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B492AF9C199D7E76000CFCD7 /* ROMAppDelegate.m */; };
+		B492AF9F199D7E76000CFCD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B492AF9E199D7E76000CFCD7 /* Images.xcassets */; };
+		B492AFA6199D7E76000CFCD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AFA5199D7E76000CFCD7 /* XCTest.framework */; };
+		B492AFA7199D7E76000CFCD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AF8C199D7E76000CFCD7 /* Foundation.framework */; };
+		B492AFA8199D7E76000CFCD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AF90199D7E76000CFCD7 /* UIKit.framework */; };
+		B492AFB0199D7E76000CFCD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B492AFAE199D7E76000CFCD7 /* InfoPlist.strings */; };
+		B492AFB2199D7E76000CFCD7 /* LetdownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B492AFB1199D7E76000CFCD7 /* LetdownTests.m */; };
+		B492AFBD199D7EC6000CFCD7 /* ROMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B492AFBC199D7EC6000CFCD7 /* ROMViewController.m */; };
+		B492AFBF199E7983000CFCD7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B492AFBE199E7983000CFCD7 /* AVFoundation.framework */; };
+		B492AFC1199E79D4000CFCD7 /* everything2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B492AFC0199E79D4000CFCD7 /* everything2.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B492AFA9199D7E76000CFCD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B492AF81199D7E76000CFCD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B492AF88199D7E76000CFCD7;
+			remoteInfo = Letdown;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B492AF89199D7E76000CFCD7 /* Letdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B492AF8C199D7E76000CFCD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B492AF8E199D7E76000CFCD7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B492AF90199D7E76000CFCD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B492AF94199D7E76000CFCD7 /* Letdown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Letdown-Info.plist"; sourceTree = "<group>"; };
+		B492AF96199D7E76000CFCD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B492AF98199D7E76000CFCD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B492AF9A199D7E76000CFCD7 /* Letdown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Letdown-Prefix.pch"; sourceTree = "<group>"; };
+		B492AF9B199D7E76000CFCD7 /* ROMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROMAppDelegate.h; sourceTree = "<group>"; };
+		B492AF9C199D7E76000CFCD7 /* ROMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROMAppDelegate.m; sourceTree = "<group>"; };
+		B492AF9E199D7E76000CFCD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B492AFA4199D7E76000CFCD7 /* LetdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B492AFA5199D7E76000CFCD7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B492AFAD199D7E76000CFCD7 /* LetdownTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LetdownTests-Info.plist"; sourceTree = "<group>"; };
+		B492AFAF199D7E76000CFCD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B492AFB1199D7E76000CFCD7 /* LetdownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LetdownTests.m; sourceTree = "<group>"; };
+		B492AFBB199D7EC6000CFCD7 /* ROMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROMViewController.h; sourceTree = "<group>"; };
+		B492AFBC199D7EC6000CFCD7 /* ROMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROMViewController.m; sourceTree = "<group>"; };
+		B492AFBE199E7983000CFCD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B492AFC0199E79D4000CFCD7 /* everything2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = everything2.mp3; path = ../../../Desktop/everything2.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B492AF86199D7E76000CFCD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AFBF199E7983000CFCD7 /* AVFoundation.framework in Frameworks */,
+				B492AF8F199D7E76000CFCD7 /* CoreGraphics.framework in Frameworks */,
+				B492AF91199D7E76000CFCD7 /* UIKit.framework in Frameworks */,
+				B492AF8D199D7E76000CFCD7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B492AFA1199D7E76000CFCD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AFA6199D7E76000CFCD7 /* XCTest.framework in Frameworks */,
+				B492AFA8199D7E76000CFCD7 /* UIKit.framework in Frameworks */,
+				B492AFA7199D7E76000CFCD7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B492AF80199D7E76000CFCD7 = {
+			isa = PBXGroup;
+			children = (
+				B492AFBB199D7EC6000CFCD7 /* ROMViewController.h */,
+				B492AFBC199D7EC6000CFCD7 /* ROMViewController.m */,
+				B492AFC0199E79D4000CFCD7 /* everything2.mp3 */,
+				B492AF92199D7E76000CFCD7 /* Letdown */,
+				B492AFAB199D7E76000CFCD7 /* LetdownTests */,
+				B492AF8B199D7E76000CFCD7 /* Frameworks */,
+				B492AF8A199D7E76000CFCD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B492AF8A199D7E76000CFCD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B492AF89199D7E76000CFCD7 /* Letdown.app */,
+				B492AFA4199D7E76000CFCD7 /* LetdownTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B492AF8B199D7E76000CFCD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B492AFBE199E7983000CFCD7 /* AVFoundation.framework */,
+				B492AF8C199D7E76000CFCD7 /* Foundation.framework */,
+				B492AF8E199D7E76000CFCD7 /* CoreGraphics.framework */,
+				B492AF90199D7E76000CFCD7 /* UIKit.framework */,
+				B492AFA5199D7E76000CFCD7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B492AF92199D7E76000CFCD7 /* Letdown */ = {
+			isa = PBXGroup;
+			children = (
+				B492AF9B199D7E76000CFCD7 /* ROMAppDelegate.h */,
+				B492AF9C199D7E76000CFCD7 /* ROMAppDelegate.m */,
+				B492AF9E199D7E76000CFCD7 /* Images.xcassets */,
+				B492AF93199D7E76000CFCD7 /* Supporting Files */,
+			);
+			path = Letdown;
+			sourceTree = "<group>";
+		};
+		B492AF93199D7E76000CFCD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B492AF94199D7E76000CFCD7 /* Letdown-Info.plist */,
+				B492AF95199D7E76000CFCD7 /* InfoPlist.strings */,
+				B492AF98199D7E76000CFCD7 /* main.m */,
+				B492AF9A199D7E76000CFCD7 /* Letdown-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B492AFAB199D7E76000CFCD7 /* LetdownTests */ = {
+			isa = PBXGroup;
+			children = (
+				B492AFB1199D7E76000CFCD7 /* LetdownTests.m */,
+				B492AFAC199D7E76000CFCD7 /* Supporting Files */,
+			);
+			path = LetdownTests;
+			sourceTree = "<group>";
+		};
+		B492AFAC199D7E76000CFCD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B492AFAD199D7E76000CFCD7 /* LetdownTests-Info.plist */,
+				B492AFAE199D7E76000CFCD7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B492AF88199D7E76000CFCD7 /* Letdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B492AFB5199D7E76000CFCD7 /* Build configuration list for PBXNativeTarget "Letdown" */;
+			buildPhases = (
+				B492AF85199D7E76000CFCD7 /* Sources */,
+				B492AF86199D7E76000CFCD7 /* Frameworks */,
+				B492AF87199D7E76000CFCD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Letdown;
+			productName = Letdown;
+			productReference = B492AF89199D7E76000CFCD7 /* Letdown.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B492AFA3199D7E76000CFCD7 /* LetdownTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B492AFB8199D7E76000CFCD7 /* Build configuration list for PBXNativeTarget "LetdownTests" */;
+			buildPhases = (
+				B492AFA0199D7E76000CFCD7 /* Sources */,
+				B492AFA1199D7E76000CFCD7 /* Frameworks */,
+				B492AFA2199D7E76000CFCD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B492AFAA199D7E76000CFCD7 /* PBXTargetDependency */,
+			);
+			name = LetdownTests;
+			productName = LetdownTests;
+			productReference = B492AFA4199D7E76000CFCD7 /* LetdownTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B492AF81199D7E76000CFCD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ROM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joshua Hendershot";
+				TargetAttributes = {
+					B492AFA3199D7E76000CFCD7 = {
+						TestTargetID = B492AF88199D7E76000CFCD7;
+					};
+				};
+			};
+			buildConfigurationList = B492AF84199D7E76000CFCD7 /* Build configuration list for PBXProject "Letdown" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B492AF80199D7E76000CFCD7;
+			productRefGroup = B492AF8A199D7E76000CFCD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B492AF88199D7E76000CFCD7 /* Letdown */,
+				B492AFA3199D7E76000CFCD7 /* LetdownTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B492AF87199D7E76000CFCD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AF97199D7E76000CFCD7 /* InfoPlist.strings in Resources */,
+				B492AF9F199D7E76000CFCD7 /* Images.xcassets in Resources */,
+				B492AFC1199E79D4000CFCD7 /* everything2.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B492AFA2199D7E76000CFCD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AFB0199D7E76000CFCD7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B492AF85199D7E76000CFCD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AF99199D7E76000CFCD7 /* main.m in Sources */,
+				B492AF9D199D7E76000CFCD7 /* ROMAppDelegate.m in Sources */,
+				B492AFBD199D7EC6000CFCD7 /* ROMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B492AFA0199D7E76000CFCD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B492AFB2199D7E76000CFCD7 /* LetdownTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B492AFAA199D7E76000CFCD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B492AF88199D7E76000CFCD7 /* Letdown */;
+			targetProxy = B492AFA9199D7E76000CFCD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B492AF95199D7E76000CFCD7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B492AF96199D7E76000CFCD7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B492AFAE199D7E76000CFCD7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B492AFAF199D7E76000CFCD7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B492AFB3199D7E76000CFCD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B492AFB4199D7E76000CFCD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B492AFB6199D7E76000CFCD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Letdown/Letdown-Prefix.pch";
+				INFOPLIST_FILE = "Letdown/Letdown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B492AFB7199D7E76000CFCD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Letdown/Letdown-Prefix.pch";
+				INFOPLIST_FILE = "Letdown/Letdown-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B492AFB9199D7E76000CFCD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Letdown.app/Letdown";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Letdown/Letdown-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LetdownTests/LetdownTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B492AFBA199D7E76000CFCD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Letdown.app/Letdown";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Letdown/Letdown-Prefix.pch";
+				INFOPLIST_FILE = "LetdownTests/LetdownTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B492AF84199D7E76000CFCD7 /* Build configuration list for PBXProject "Letdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B492AFB3199D7E76000CFCD7 /* Debug */,
+				B492AFB4199D7E76000CFCD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B492AFB5199D7E76000CFCD7 /* Build configuration list for PBXNativeTarget "Letdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B492AFB6199D7E76000CFCD7 /* Debug */,
+				B492AFB7199D7E76000CFCD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B492AFB8199D7E76000CFCD7 /* Build configuration list for PBXNativeTarget "LetdownTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B492AFB9199D7E76000CFCD7 /* Debug */,
+				B492AFBA199D7E76000CFCD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B492AF81199D7E76000CFCD7 /* Project object */;
+}
