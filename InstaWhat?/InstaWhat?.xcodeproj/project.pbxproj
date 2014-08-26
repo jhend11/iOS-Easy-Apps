@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B49901D019AB7AC200ECCB2B /* IWAFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49901CF19AB7AC200ECCB2B /* IWAFilterViewController.m */; };
+		B49901D319ABB81600ECCB2B /* IWAEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49901D219ABB81600ECCB2B /* IWAEditPhotoViewController.m */; };
 		B4DD2E6819A628F3006B2358 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD2E6719A628F3006B2358 /* Foundation.framework */; };
 		B4DD2E6A19A628F3006B2358 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD2E6919A628F3006B2358 /* CoreGraphics.framework */; };
 		B4DD2E6C19A628F3006B2358 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD2E6B19A628F3006B2358 /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B49901CE19AB7AC200ECCB2B /* IWAFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWAFilterViewController.h; sourceTree = "<group>"; };
+		B49901CF19AB7AC200ECCB2B /* IWAFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWAFilterViewController.m; sourceTree = "<group>"; };
+		B49901D119ABB81600ECCB2B /* IWAEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IWAEditPhotoViewController.h; path = ../IWAEditPhotoViewController.h; sourceTree = "<group>"; };
+		B49901D219ABB81600ECCB2B /* IWAEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IWAEditPhotoViewController.m; path = ../IWAEditPhotoViewController.m; sourceTree = "<group>"; };
 		B4DD2E6419A628F3006B2358 /* InstaWhat?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaWhat?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DD2E6719A628F3006B2358 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B4DD2E6919A628F3006B2358 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +123,10 @@
 				B4DD2E7919A628F3006B2358 /* Main.storyboard */,
 				B4DD2E7C19A628F3006B2358 /* IWAViewController.h */,
 				B4DD2E7D19A628F3006B2358 /* IWAViewController.m */,
+				B49901CE19AB7AC200ECCB2B /* IWAFilterViewController.h */,
+				B49901CF19AB7AC200ECCB2B /* IWAFilterViewController.m */,
+				B49901D119ABB81600ECCB2B /* IWAEditPhotoViewController.h */,
+				B49901D219ABB81600ECCB2B /* IWAEditPhotoViewController.m */,
 				B4DD2E7F19A628F3006B2358 /* Images.xcassets */,
 				B4DD2E6E19A628F3006B2358 /* Supporting Files */,
 			);
@@ -252,6 +262,8 @@
 			files = (
 				B4DD2E7E19A628F3006B2358 /* IWAViewController.m in Sources */,
 				B4DD2E7819A628F3006B2358 /* IWAAppDelegate.m in Sources */,
+				B49901D319ABB81600ECCB2B /* IWAEditPhotoViewController.m in Sources */,
+				B49901D019AB7AC200ECCB2B /* IWAFilterViewController.m in Sources */,
 				B4DD2E7419A628F3006B2358 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstaWhat?/InstaWhat?-Prefix.pch";
 				INFOPLIST_FILE = "InstaWhat?/InstaWhat?-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstaWhat?/InstaWhat?-Prefix.pch";
 				INFOPLIST_FILE = "InstaWhat?/InstaWhat?-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +471,7 @@
 				B4DD2E9819A628F3006B2358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4DD2E9919A628F3006B2358 /* Build configuration list for PBXNativeTarget "InstaWhat?Tests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +480,7 @@
 				B4DD2E9B19A628F3006B2358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
