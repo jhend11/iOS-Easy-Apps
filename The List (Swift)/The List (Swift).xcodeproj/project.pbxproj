@@ -12,6 +12,8 @@
 		B41CBDF419A783FD004FC503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41CBDF219A783FD004FC503 /* Main.storyboard */; };
 		B41CBDF619A783FD004FC503 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41CBDF519A783FD004FC503 /* Images.xcassets */; };
 		B41CBE0219A783FD004FC503 /* The_List__Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CBE0119A783FD004FC503 /* The_List__Swift_Tests.swift */; };
+		B41CBE0D19A790B7004FC503 /* naughty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CBE0B19A790B7004FC503 /* naughty@2x.png */; };
+		B41CBE0E19A790B7004FC503 /* nice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CBE0C19A790B7004FC503 /* nice@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		B41CBDFB19A783FD004FC503 /* The List (Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The List (Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41CBE0019A783FD004FC503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B41CBE0119A783FD004FC503 /* The_List__Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_List__Swift_Tests.swift; sourceTree = "<group>"; };
+		B41CBE0B19A790B7004FC503 /* naughty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "naughty@2x.png"; sourceTree = "<group>"; };
+		B41CBE0C19A790B7004FC503 /* nice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nice@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		B41CBDEC19A783FD004FC503 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B41CBE0B19A790B7004FC503 /* naughty@2x.png */,
+				B41CBE0C19A790B7004FC503 /* nice@2x.png */,
 				B41CBDED19A783FD004FC503 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -189,7 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41CBE0D19A790B7004FC503 /* naughty@2x.png in Resources */,
 				B41CBDF419A783FD004FC503 /* Main.storyboard in Resources */,
+				B41CBE0E19A790B7004FC503 /* nice@2x.png in Resources */,
 				B41CBDF619A783FD004FC503 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
