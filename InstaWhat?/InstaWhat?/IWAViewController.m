@@ -64,8 +64,9 @@
     
 
     
-    UIButton * takePictureButton = [[UIButton alloc]initWithFrame:CGRectMake(50, 370, 100, 100)];
+    UIButton * takePictureButton = [[UIButton alloc]initWithFrame:CGRectMake(110, 260, 100, 100)];
     takePictureButton.backgroundColor = [UIColor blackColor];
+    takePictureButton.layer.cornerRadius = 50;
     [takePictureButton addTarget:self action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:takePictureButton];
 }

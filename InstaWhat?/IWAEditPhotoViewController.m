@@ -8,14 +8,17 @@
 
 #import "IWAEditPhotoViewController.h"
 #import "IWAFilterViewController.h"
-@interface IWAEditPhotoViewController ()
+#import <Parse/Parse.h>
+@interface IWAEditPhotoViewController ()<UITextViewDelegate>
 
 @end
 
 @implementation IWAEditPhotoViewController
 {
+    UIView * captionHolder;
     UIImageView * imageView1;
-    UITextField * postTextField;
+    UITextView * postTextField;
+    UITextView * captionView;
    
 }
 - (instancetype)init
@@ -23,44 +26,41 @@
     self = [super init];
     if (self) {
         
-//        self.view.backgroundColor = [UIColor whiteColor];
-//        UIView * masterView = [[ UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
-        //      UIView * masterView = [[ UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-//        masterView.backgroundColor = [UIColor whiteColor];
-//        [self.view addSubview:masterView];
-//        
-//        imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(20, 60, 320, 320)];
-        //      UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, SCREEN_WIDTH-20, SCREEN_HEIGHT / 2)];
-//        imageView1.backgroundColor = [UIColor lightGrayColor];
-//        [self.view addSubview:imageView1];
-//        
-//        UIView * minorView = [[ UIView alloc] initWithFrame:CGRectMake(20, 420, 150, 304)];
-        //        UIView * minorView = [[ UIView alloc] initWithFrame:CGRectMake(20, (SCREEN_HEIGHT / 2) + 20, SCREEN_WIDTH -40, (SCREEN_HEIGHT / 2) - 20)];
-//        minorView.backgroundColor = [UIColor lightGrayColor];
-//        [self.view addSubview:minorView];
+        self.view.backgroundColor = [UIColor whiteColor];
         
         
-//        postTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 440, 50, 200)];
-        //        UITextField * postTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, (SCREEN_HEIGHT / 2) + 40, SCREEN_WIDTH - 80, (SCREEN_HEIGHT / 2) - 50)];
-//        postTextField.backgroundColor = [UIColor whiteColor];
-//        [self.view addSubview:postTextField];
+        captionHolder = [[UIView alloc]initWithFrame:CGRectMake(0,310,320,[UIScreen mainScreen].bounds.size.height - 310)];
+        captionHolder.backgroundColor = [UIColor lightGrayColor];
+        captionHolder.layer.borderWidth = 10;
+        captionHolder.layer.borderColor = [UIColor whiteColor].CGColor;
+        [self.view addSubview:captionHolder];
         
-//        UIButton * submitButton = [[UIButton alloc] initWithFrame:CGRectMake(40, 460, 60, 60)];
-//        //      UIButton * submitButton = [[UIButton alloc] initWithFrame:CGRectMake(40, (SCREEN_HEIGHT / 2) - 50, SCREEN_WIDTH -80, (SCREEN_HEIGHT / 2) - 20)];
-//        submitButton.backgroundColor = [UIColor orangeColor];
-//        [submitButton setTitle:@"SUBMIT" forState:UIControlStateNormal];
-//        [submitButton addTarget:self action:@selector(submitPost) forControlEvents:UIControlEventTouchUpInside];
-//        [self.view addSubview:submitButton];
+        captionView = [[UITextView alloc]initWithFrame:CGRectMake(20, 20, 280, captionHolder.frame.size.height - 70)];
+        captionView.delegate = self;
+        [captionHolder addSubview:captionView];
         
+        
+        UIButton * submitButton = [[UIButton alloc] initWithFrame:CGRectMake(20, captionHolder.frame.size.height - 60, 280, 40)];
+        submitButton.backgroundColor = [UIColor orangeColor];
+        [submitButton setTitle:@"Submit" forState:UIControlStateNormal];
+        [submitButton setTitleColor:[UIColor whiteColor]forState:UIControlStateNormal];
+        [submitButton addTarget:self action:@selector(submitPost) forControlEvents:UIControlEventTouchUpInside];
+        
+        [captionHolder addSubview:submitButton];
         
         
         
     }
     return self;
 }
+-(void)textViewDidBeginEditing:(UITextView*)textView
+{
+    [UIView animateWithDuration: 0.2 animations:^{
+        captionHolder.center = CGPointMake(captionHolder.center.x, captionHolder.center.y - 216);
+    }];
+}
 -(void)setImageView2:(UIImageView *)imageView2
 {
- self.imageView2.backgroundColor = [UIColor lightGrayColor];
 }
 
 -(void)setEditImage:(UIImage *)editImage
@@ -70,17 +70,30 @@
 }
 -(void)submitPost
 {
-    NSString * postInfo = [[NSString alloc]init];
-    if (postTextField.text == nil) {
-        NSLog(@"emptyString");
-    } else {
-        postInfo = postTextField.text;
-        NSLog(@"%@", postInfo);
-        
-        postTextField.text = @"";
-        [postTextField resignFirstResponder];
-    }
+    PFObject * face = [PFObject objectWithClassName:@"Faces"];
+    [face setObject:captionView.text forKey:@"text"];
+    NSData * data = UIImagePNGRepresentation(imageView1.image);
+    PFFile * file = [PFFile fileWithData:data];
+    [face setObject:file forKey:@"image"];
+    [face saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
+        [nc postNotificationName:@"faceSaved" object:nil];
+    }];
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+//    NSString * postInfo = [[NSString alloc]init];
+//    if (postTextField.text == nil) {
+//        NSLog(@"emptyString");
+//    } else {
+//        postInfo = postTextField.text;
+//        NSLog(@"%@", postInfo);
+//        
+//        postTextField.text = @"";
+//        [postTextField resignFirstResponder];
+//    }
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
