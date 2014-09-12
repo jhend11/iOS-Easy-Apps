@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B461BFD819C08669004BE29E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BFD719C08669004BE29E /* AppDelegate.swift */; };
+		B410068119C327C900A25E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BFD719C08669004BE29E /* AppDelegate.swift */; };
+		B410068219C32C5000A25E55 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461BFFE19C09141004BE29E /* ParseFacebookUtils.framework */; };
+		B410068419C32CC900A25E55 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410068319C32CC900A25E55 /* MessageCell.swift */; };
 		B461BFDA19C08669004BE29E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BFD919C08669004BE29E /* MessageViewController.swift */; };
 		B461BFDD19C08669004BE29E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B461BFDB19C08669004BE29E /* Main.storyboard */; };
 		B461BFDF19C08669004BE29E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B461BFDE19C08669004BE29E /* Images.xcassets */; };
@@ -16,7 +18,6 @@
 		B461BFF819C08B70004BE29E /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BFF719C08B70004BE29E /* FriendsTableViewController.swift */; };
 		B461BFFA19C08C27004BE29E /* ChooseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BFF919C08C27004BE29E /* ChooseTableViewController.swift */; };
 		B461BFFF19C09141004BE29E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461BFFC19C09141004BE29E /* Bolts.framework */; };
-		B461C00119C09141004BE29E /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461BFFE19C09141004BE29E /* ParseFacebookUtils.framework */; };
 		B461C01019C09418004BE29E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461C00619C09418004BE29E /* AVFoundation.framework */; };
 		B461C01119C09418004BE29E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461C00719C09418004BE29E /* CoreGraphics.framework */; };
 		B461C01219C09418004BE29E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461C00819C09418004BE29E /* AudioToolbox.framework */; };
@@ -27,7 +28,7 @@
 		B461C01719C09418004BE29E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461C00D19C09418004BE29E /* QuartzCore.framework */; };
 		B461C01819C09418004BE29E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461C00E19C09418004BE29E /* MobileCoreServices.framework */; };
 		B461C01919C09418004BE29E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B461C00F19C09418004BE29E /* libz.dylib */; };
-		B49C0C9919C0CD1800DBBC26 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461BFFD19C09141004BE29E /* Parse.framework */; };
+		B4BF08DB19C23BEB0040C4C5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B461BFFD19C09141004BE29E /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B410068319C32CC900A25E55 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageCell.swift; path = ../MessageCell.swift; sourceTree = "<group>"; };
 		B461BFD219C08669004BE29E /* txt4u.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = txt4u.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B461BFD619C08669004BE29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B461BFD719C08669004BE29E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,13 +82,13 @@
 				B461C01919C09418004BE29E /* libz.dylib in Frameworks */,
 				B461C01319C09418004BE29E /* CFNetwork.framework in Frameworks */,
 				B461BFFF19C09141004BE29E /* Bolts.framework in Frameworks */,
-				B49C0C9919C0CD1800DBBC26 /* Parse.framework in Frameworks */,
+				B4BF08DB19C23BEB0040C4C5 /* Parse.framework in Frameworks */,
 				B461C01419C09418004BE29E /* CoreLocation.framework in Frameworks */,
 				B461C01619C09418004BE29E /* Security.framework in Frameworks */,
 				B461C01119C09418004BE29E /* CoreGraphics.framework in Frameworks */,
 				B461C01819C09418004BE29E /* MobileCoreServices.framework in Frameworks */,
-				B461C00119C09141004BE29E /* ParseFacebookUtils.framework in Frameworks */,
 				B461C01219C09418004BE29E /* AudioToolbox.framework in Frameworks */,
+				B410068219C32C5000A25E55 /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +129,7 @@
 				B461BFD919C08669004BE29E /* MessageViewController.swift */,
 				B461BFF719C08B70004BE29E /* FriendsTableViewController.swift */,
 				B461BFF919C08C27004BE29E /* ChooseTableViewController.swift */,
+				B410068319C32CC900A25E55 /* MessageCell.swift */,
 				B461BFDB19C08669004BE29E /* Main.storyboard */,
 				B461BFDE19C08669004BE29E /* Images.xcassets */,
 				B461BFE019C08669004BE29E /* LaunchScreen.xib */,
@@ -280,8 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B410068119C327C900A25E55 /* AppDelegate.swift in Sources */,
+				B410068419C32CC900A25E55 /* MessageCell.swift in Sources */,
 				B461BFDA19C08669004BE29E /* MessageViewController.swift in Sources */,
-				B461BFD819C08669004BE29E /* AppDelegate.swift in Sources */,
 				B461BFFA19C08C27004BE29E /* ChooseTableViewController.swift in Sources */,
 				B461BFF819C08B70004BE29E /* FriendsTableViewController.swift in Sources */,
 			);
@@ -418,6 +422,24 @@
 					/Users/midniteslide/_github/Lets,
 					Be,
 					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
 				);
 				INFOPLIST_FILE = txt4u/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,6 +456,24 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
+					/Users/midniteslide/_github/Lets,
+					Be,
+					Friends,
 					/Users/midniteslide/_github/Lets,
 					Be,
 					Friends,

@@ -35,6 +35,9 @@
     locationManager = [[CLLocationManager alloc]init];
     locationManager.delegate = self;
     [locationManager startUpdatingLocation];
+    CLLocation * loc = [[CLLocation alloc]init];
+    NSLog(@"%f", loc.coordinate.latitude);
+    locationManager.location.coordinate.latitude
     
     MCSTableViewController * tVC = [[MCSTableViewController alloc]init];
     tVC.tableView.frame = CGRectMake(0, 300, 320, 200);

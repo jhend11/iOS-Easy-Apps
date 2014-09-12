@@ -31,11 +31,17 @@ class ChooseTableViewController: FriendsTableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        var presentingNavC = self.navigationController?.presentingViewController as UINavigationController
-//        var friendsTVC = presentingNavC.viewControllers[0] as FriendsTableViewController
-//        var myfriends = friendsTVC.friends
+        var presentingNavC = self.navigationController?.presentingViewController as UINavigationController
+        var friendsTVC = presentingNavC.viewControllers[0] as FriendsTableViewController
+        var myfriends = friendsTVC.friends
         
-        ((self.navigationController?.presentingViewController as UINavigationController).viewControllers[0] as FriendsTableViewController).friends += [friends[indexPath.row]]
+//        ((self.navigationController?.presentingViewController as UINavigationController).viewControllers[0] as FriendsTableViewController).friends += [friends[indexPath.row]]
+        
+        friendsTVC.friends += [friends[indexPath.row]]
+        
+        var user = PFUser.currentUser()
+        user["friends"] = friendsTVC.friends
+        user.saveInBackground()
 
         
         
