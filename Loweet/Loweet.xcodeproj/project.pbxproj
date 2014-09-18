@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B410069419C71CF600A25E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410069319C71CF600A25E55 /* AppDelegate.swift */; };
+		B410069619C71CF600A25E55 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410069519C71CF600A25E55 /* FirstViewController.swift */; };
+		B410069819C71CF600A25E55 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410069719C71CF600A25E55 /* SecondViewController.swift */; };
+		B410069B19C71CF600A25E55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B410069919C71CF600A25E55 /* Main.storyboard */; };
+		B410069D19C71CF600A25E55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B410069C19C71CF600A25E55 /* Images.xcassets */; };
+		B41006A019C71CF600A25E55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B410069E19C71CF600A25E55 /* LaunchScreen.xib */; };
+		B41006AC19C71CF600A25E55 /* LoweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41006AB19C71CF600A25E55 /* LoweetTests.swift */; };
+		B41006B619C7216D00A25E55 /* TweetLocationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41006B519C7216D00A25E55 /* TweetLocationTVC.swift */; };
+		B41006B819C7219400A25E55 /* TweetLocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41006B719C7219400A25E55 /* TweetLocationsTableViewController.swift */; };
+		B41006BA19C721F100A25E55 /* MapLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41006B919C721F100A25E55 /* MapLocationsViewController.swift */; };
+		B415CC7219C9BCDF002997B7 /* Swifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64419C9AFDC00B1E4CE /* Swifter.swift */; };
+		B415CC7319C9BCDF002997B7 /* SwifterCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64519C9AFDC00B1E4CE /* SwifterCredential.swift */; };
+		B415CC7419C9BCDF002997B7 /* SwifterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64619C9AFDC00B1E4CE /* SwifterAuth.swift */; };
+		B415CC7519C9BCDF002997B7 /* SwifterTimelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64719C9AFDC00B1E4CE /* SwifterTimelines.swift */; };
+		B415CC7619C9BCDF002997B7 /* SwifterTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64819C9AFDC00B1E4CE /* SwifterTweets.swift */; };
+		B415CC7719C9BCDF002997B7 /* SwifterSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64919C9AFDC00B1E4CE /* SwifterSearch.swift */; };
+		B415CC7819C9BCDF002997B7 /* SwifterStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64A19C9AFDC00B1E4CE /* SwifterStreaming.swift */; };
+		B415CC7919C9BCDF002997B7 /* SwifterMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64B19C9AFDC00B1E4CE /* SwifterMessages.swift */; };
+		B415CC7A19C9BCDF002997B7 /* SwifterFollowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64C19C9AFDC00B1E4CE /* SwifterFollowers.swift */; };
+		B415CC7B19C9BCDF002997B7 /* SwifterUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64D19C9AFDC00B1E4CE /* SwifterUsers.swift */; };
+		B415CC7C19C9BCDF002997B7 /* SwifterSuggested.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64E19C9AFDC00B1E4CE /* SwifterSuggested.swift */; };
+		B415CC7D19C9BCDF002997B7 /* SwifterFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E64F19C9AFDC00B1E4CE /* SwifterFavorites.swift */; };
+		B415CC7E19C9BCDF002997B7 /* SwifterLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65019C9AFDC00B1E4CE /* SwifterLists.swift */; };
+		B415CC7F19C9BCDF002997B7 /* SwifterSavedSearches.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65119C9AFDC00B1E4CE /* SwifterSavedSearches.swift */; };
+		B415CC8019C9BCDF002997B7 /* SwifterPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65219C9AFDC00B1E4CE /* SwifterPlaces.swift */; };
+		B415CC8119C9BCDF002997B7 /* SwifterTrends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65319C9AFDC00B1E4CE /* SwifterTrends.swift */; };
+		B415CC8219C9BCDF002997B7 /* SwifterSpam.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65419C9AFDC00B1E4CE /* SwifterSpam.swift */; };
+		B415CC8319C9BCDF002997B7 /* SwifterHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65519C9AFDC00B1E4CE /* SwifterHelp.swift */; };
+		B415CC8419C9BCDF002997B7 /* SwifterClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65619C9AFDC00B1E4CE /* SwifterClientProtocol.swift */; };
+		B415CC8519C9BCDF002997B7 /* SwifterOAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65719C9AFDC00B1E4CE /* SwifterOAuthClient.swift */; };
+		B415CC8619C9BCDF002997B7 /* SwifterAccountsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65819C9AFDC00B1E4CE /* SwifterAccountsClient.swift */; };
+		B415CC8719C9BCDF002997B7 /* SwifterAppOnlyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65919C9AFDC00B1E4CE /* SwifterAppOnlyClient.swift */; };
+		B415CC8819C9BCDF002997B7 /* SwifterHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65A19C9AFDC00B1E4CE /* SwifterHTTPRequest.swift */; };
+		B415CC8919C9BCDF002997B7 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E65B19C9AFDC00B1E4CE /* JSON.swift */; };
+		B415CC8A19C9BCE7002997B7 /* Dictionary+Swifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E67519C9AFF700B1E4CE /* Dictionary+Swifter.swift */; };
+		B415CC8B19C9BCE7002997B7 /* NSURL+Swifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E67619C9AFF700B1E4CE /* NSURL+Swifter.swift */; };
+		B415CC8C19C9BCE7002997B7 /* String+Swifter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452E67719C9AFF700B1E4CE /* String+Swifter.swift */; };
+		B415CC8D19C9BD63002997B7 /* Swifter-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = B452E6BC19C9B4A000B1E4CE /* Swifter-Bridging-Header.h */; };
+		B415CC8F19C9E23E002997B7 /* FoundLocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415CC8E19C9E23E002997B7 /* FoundLocationsTableViewController.swift */; };
+		B43A9C4319C734DA008D572D /* NewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A9C4219C734DA008D572D /* NewLocationViewController.swift */; };
+		B43A9C4519C73A50008D572D /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A9C4419C73A50008D572D /* LocationData.swift */; };
+		B43A9C4719C76E57008D572D /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A9C4619C76E57008D572D /* Marker.swift */; };
+		B452E69519C9B03200B1E4CE /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B452E68119C9B03200B1E4CE /* Swifter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B41006A619C71CF600A25E55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B410068619C71CF600A25E55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B410068D19C71CF600A25E55;
+			remoteInfo = Loweet;
+		};
+		B452E69319C9B03200B1E4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B410068619C71CF600A25E55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B452E68019C9B03200B1E4CE;
+			remoteInfo = Swifter;
+		};
+		B452E69819C9B03200B1E4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B410068619C71CF600A25E55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B452E68019C9B03200B1E4CE;
+			remoteInfo = Swifter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B452E69619C9B03200B1E4CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B410068E19C71CF600A25E55 /* Loweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B410069219C71CF600A25E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B410069319C71CF600A25E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B410069519C71CF600A25E55 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B410069719C71CF600A25E55 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B410069A19C71CF600A25E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B410069C19C71CF600A25E55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B410069F19C71CF600A25E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B41006A519C71CF600A25E55 /* LoweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41006AA19C71CF600A25E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B41006AB19C71CF600A25E55 /* LoweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoweetTests.swift; sourceTree = "<group>"; };
+		B41006B519C7216D00A25E55 /* TweetLocationTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetLocationTVC.swift; path = ../TweetLocationTVC.swift; sourceTree = "<group>"; };
+		B41006B719C7219400A25E55 /* TweetLocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetLocationsTableViewController.swift; path = ../TweetLocationsTableViewController.swift; sourceTree = "<group>"; };
+		B41006B919C721F100A25E55 /* MapLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapLocationsViewController.swift; path = ../MapLocationsViewController.swift; sourceTree = "<group>"; };
+		B415CC8E19C9E23E002997B7 /* FoundLocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundLocationsTableViewController.swift; sourceTree = "<group>"; };
+		B43A9C4219C734DA008D572D /* NewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocationViewController.swift; sourceTree = "<group>"; };
+		B43A9C4419C73A50008D572D /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		B43A9C4619C76E57008D572D /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		B452E64319C9AFDC00B1E4CE /* Swifter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swifter.h; sourceTree = "<group>"; };
+		B452E64419C9AFDC00B1E4CE /* Swifter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swifter.swift; sourceTree = "<group>"; };
+		B452E64519C9AFDC00B1E4CE /* SwifterCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterCredential.swift; sourceTree = "<group>"; };
+		B452E64619C9AFDC00B1E4CE /* SwifterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterAuth.swift; sourceTree = "<group>"; };
+		B452E64719C9AFDC00B1E4CE /* SwifterTimelines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterTimelines.swift; sourceTree = "<group>"; };
+		B452E64819C9AFDC00B1E4CE /* SwifterTweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterTweets.swift; sourceTree = "<group>"; };
+		B452E64919C9AFDC00B1E4CE /* SwifterSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterSearch.swift; sourceTree = "<group>"; };
+		B452E64A19C9AFDC00B1E4CE /* SwifterStreaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterStreaming.swift; sourceTree = "<group>"; };
+		B452E64B19C9AFDC00B1E4CE /* SwifterMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterMessages.swift; sourceTree = "<group>"; };
+		B452E64C19C9AFDC00B1E4CE /* SwifterFollowers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterFollowers.swift; sourceTree = "<group>"; };
+		B452E64D19C9AFDC00B1E4CE /* SwifterUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterUsers.swift; sourceTree = "<group>"; };
+		B452E64E19C9AFDC00B1E4CE /* SwifterSuggested.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterSuggested.swift; sourceTree = "<group>"; };
+		B452E64F19C9AFDC00B1E4CE /* SwifterFavorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterFavorites.swift; sourceTree = "<group>"; };
+		B452E65019C9AFDC00B1E4CE /* SwifterLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterLists.swift; sourceTree = "<group>"; };
+		B452E65119C9AFDC00B1E4CE /* SwifterSavedSearches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterSavedSearches.swift; sourceTree = "<group>"; };
+		B452E65219C9AFDC00B1E4CE /* SwifterPlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterPlaces.swift; sourceTree = "<group>"; };
+		B452E65319C9AFDC00B1E4CE /* SwifterTrends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterTrends.swift; sourceTree = "<group>"; };
+		B452E65419C9AFDC00B1E4CE /* SwifterSpam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterSpam.swift; sourceTree = "<group>"; };
+		B452E65519C9AFDC00B1E4CE /* SwifterHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterHelp.swift; sourceTree = "<group>"; };
+		B452E65619C9AFDC00B1E4CE /* SwifterClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterClientProtocol.swift; sourceTree = "<group>"; };
+		B452E65719C9AFDC00B1E4CE /* SwifterOAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterOAuthClient.swift; sourceTree = "<group>"; };
+		B452E65819C9AFDC00B1E4CE /* SwifterAccountsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterAccountsClient.swift; sourceTree = "<group>"; };
+		B452E65919C9AFDC00B1E4CE /* SwifterAppOnlyClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterAppOnlyClient.swift; sourceTree = "<group>"; };
+		B452E65A19C9AFDC00B1E4CE /* SwifterHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifterHTTPRequest.swift; sourceTree = "<group>"; };
+		B452E65B19C9AFDC00B1E4CE /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		B452E67519C9AFF700B1E4CE /* Dictionary+Swifter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Swifter.swift"; sourceTree = "<group>"; };
+		B452E67619C9AFF700B1E4CE /* NSURL+Swifter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Swifter.swift"; sourceTree = "<group>"; };
+		B452E67719C9AFF700B1E4CE /* String+Swifter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Swifter.swift"; sourceTree = "<group>"; };
+		B452E68119C9B03200B1E4CE /* Swifter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swifter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B452E6BC19C9B4A000B1E4CE /* Swifter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swifter-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B410068B19C71CF600A25E55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B452E69519C9B03200B1E4CE /* Swifter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41006A219C71CF600A25E55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B452E67D19C9B03200B1E4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B410068519C71CF600A25E55 = {
+			isa = PBXGroup;
+			children = (
+				B452E67419C9AFE300B1E4CE /* Swifter */,
+				B410069019C71CF600A25E55 /* Loweet */,
+				B41006A819C71CF600A25E55 /* LoweetTests */,
+				B410068F19C71CF600A25E55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B410068F19C71CF600A25E55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B410068E19C71CF600A25E55 /* Loweet.app */,
+				B41006A519C71CF600A25E55 /* LoweetTests.xctest */,
+				B452E68119C9B03200B1E4CE /* Swifter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B410069019C71CF600A25E55 /* Loweet */ = {
+			isa = PBXGroup;
+			children = (
+				B410069319C71CF600A25E55 /* AppDelegate.swift */,
+				B410069519C71CF600A25E55 /* FirstViewController.swift */,
+				B410069719C71CF600A25E55 /* SecondViewController.swift */,
+				B41006B919C721F100A25E55 /* MapLocationsViewController.swift */,
+				B41006B719C7219400A25E55 /* TweetLocationsTableViewController.swift */,
+				B41006B519C7216D00A25E55 /* TweetLocationTVC.swift */,
+				B43A9C4219C734DA008D572D /* NewLocationViewController.swift */,
+				B43A9C4419C73A50008D572D /* LocationData.swift */,
+				B43A9C4619C76E57008D572D /* Marker.swift */,
+				B410069919C71CF600A25E55 /* Main.storyboard */,
+				B415CC8E19C9E23E002997B7 /* FoundLocationsTableViewController.swift */,
+				B410069C19C71CF600A25E55 /* Images.xcassets */,
+				B410069E19C71CF600A25E55 /* LaunchScreen.xib */,
+				B410069119C71CF600A25E55 /* Supporting Files */,
+			);
+			path = Loweet;
+			sourceTree = "<group>";
+		};
+		B410069119C71CF600A25E55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B410069219C71CF600A25E55 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B41006A819C71CF600A25E55 /* LoweetTests */ = {
+			isa = PBXGroup;
+			children = (
+				B41006AB19C71CF600A25E55 /* LoweetTests.swift */,
+				B41006A919C71CF600A25E55 /* Supporting Files */,
+			);
+			path = LoweetTests;
+			sourceTree = "<group>";
+		};
+		B41006A919C71CF600A25E55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B41006AA19C71CF600A25E55 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B452E67419C9AFE300B1E4CE /* Swifter */ = {
+			isa = PBXGroup;
+			children = (
+				B452E6BC19C9B4A000B1E4CE /* Swifter-Bridging-Header.h */,
+				B452E64319C9AFDC00B1E4CE /* Swifter.h */,
+				B452E64419C9AFDC00B1E4CE /* Swifter.swift */,
+				B452E64519C9AFDC00B1E4CE /* SwifterCredential.swift */,
+				B452E64619C9AFDC00B1E4CE /* SwifterAuth.swift */,
+				B452E64719C9AFDC00B1E4CE /* SwifterTimelines.swift */,
+				B452E64819C9AFDC00B1E4CE /* SwifterTweets.swift */,
+				B452E64919C9AFDC00B1E4CE /* SwifterSearch.swift */,
+				B452E64A19C9AFDC00B1E4CE /* SwifterStreaming.swift */,
+				B452E64B19C9AFDC00B1E4CE /* SwifterMessages.swift */,
+				B452E64C19C9AFDC00B1E4CE /* SwifterFollowers.swift */,
+				B452E64D19C9AFDC00B1E4CE /* SwifterUsers.swift */,
+				B452E64E19C9AFDC00B1E4CE /* SwifterSuggested.swift */,
+				B452E64F19C9AFDC00B1E4CE /* SwifterFavorites.swift */,
+				B452E65019C9AFDC00B1E4CE /* SwifterLists.swift */,
+				B452E65119C9AFDC00B1E4CE /* SwifterSavedSearches.swift */,
+				B452E65219C9AFDC00B1E4CE /* SwifterPlaces.swift */,
+				B452E65319C9AFDC00B1E4CE /* SwifterTrends.swift */,
+				B452E65419C9AFDC00B1E4CE /* SwifterSpam.swift */,
+				B452E65519C9AFDC00B1E4CE /* SwifterHelp.swift */,
+				B452E65619C9AFDC00B1E4CE /* SwifterClientProtocol.swift */,
+				B452E65719C9AFDC00B1E4CE /* SwifterOAuthClient.swift */,
+				B452E65819C9AFDC00B1E4CE /* SwifterAccountsClient.swift */,
+				B452E65919C9AFDC00B1E4CE /* SwifterAppOnlyClient.swift */,
+				B452E65A19C9AFDC00B1E4CE /* SwifterHTTPRequest.swift */,
+				B452E65B19C9AFDC00B1E4CE /* JSON.swift */,
+				B452E67B19C9AFFE00B1E4CE /* Extensions */,
+			);
+			name = Swifter;
+			sourceTree = "<group>";
+		};
+		B452E67B19C9AFFE00B1E4CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B452E67519C9AFF700B1E4CE /* Dictionary+Swifter.swift */,
+				B452E67619C9AFF700B1E4CE /* NSURL+Swifter.swift */,
+				B452E67719C9AFF700B1E4CE /* String+Swifter.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B452E67E19C9B03200B1E4CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B415CC8D19C9BD63002997B7 /* Swifter-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B410068D19C71CF600A25E55 /* Loweet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B41006AF19C71CF600A25E55 /* Build configuration list for PBXNativeTarget "Loweet" */;
+			buildPhases = (
+				B410068A19C71CF600A25E55 /* Sources */,
+				B410068B19C71CF600A25E55 /* Frameworks */,
+				B410068C19C71CF600A25E55 /* Resources */,
+				B452E69619C9B03200B1E4CE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B452E69419C9B03200B1E4CE /* PBXTargetDependency */,
+				B452E69919C9B03200B1E4CE /* PBXTargetDependency */,
+			);
+			name = Loweet;
+			productName = Loweet;
+			productReference = B410068E19C71CF600A25E55 /* Loweet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B41006A419C71CF600A25E55 /* LoweetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B41006B219C71CF600A25E55 /* Build configuration list for PBXNativeTarget "LoweetTests" */;
+			buildPhases = (
+				B41006A119C71CF600A25E55 /* Sources */,
+				B41006A219C71CF600A25E55 /* Frameworks */,
+				B41006A319C71CF600A25E55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B41006A719C71CF600A25E55 /* PBXTargetDependency */,
+			);
+			name = LoweetTests;
+			productName = LoweetTests;
+			productReference = B41006A519C71CF600A25E55 /* LoweetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B452E68019C9B03200B1E4CE /* Swifter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B452E69A19C9B03200B1E4CE /* Build configuration list for PBXNativeTarget "Swifter" */;
+			buildPhases = (
+				B452E67C19C9B03200B1E4CE /* Sources */,
+				B452E67D19C9B03200B1E4CE /* Frameworks */,
+				B452E67E19C9B03200B1E4CE /* Headers */,
+				B452E67F19C9B03200B1E4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swifter;
+			productName = Swifter;
+			productReference = B452E68119C9B03200B1E4CE /* Swifter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B410068619C71CF600A25E55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Joshua Hendershot";
+				TargetAttributes = {
+					B410068D19C71CF600A25E55 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B41006A419C71CF600A25E55 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = B410068D19C71CF600A25E55;
+					};
+					B452E68019C9B03200B1E4CE = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = B410068919C71CF600A25E55 /* Build configuration list for PBXProject "Loweet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B410068519C71CF600A25E55;
+			productRefGroup = B410068F19C71CF600A25E55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B410068D19C71CF600A25E55 /* Loweet */,
+				B41006A419C71CF600A25E55 /* LoweetTests */,
+				B452E68019C9B03200B1E4CE /* Swifter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B410068C19C71CF600A25E55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B410069B19C71CF600A25E55 /* Main.storyboard in Resources */,
+				B41006A019C71CF600A25E55 /* LaunchScreen.xib in Resources */,
+				B410069D19C71CF600A25E55 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41006A319C71CF600A25E55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B452E67F19C9B03200B1E4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B410068A19C71CF600A25E55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43A9C4519C73A50008D572D /* LocationData.swift in Sources */,
+				B41006B619C7216D00A25E55 /* TweetLocationTVC.swift in Sources */,
+				B410069819C71CF600A25E55 /* SecondViewController.swift in Sources */,
+				B43A9C4319C734DA008D572D /* NewLocationViewController.swift in Sources */,
+				B410069419C71CF600A25E55 /* AppDelegate.swift in Sources */,
+				B410069619C71CF600A25E55 /* FirstViewController.swift in Sources */,
+				B41006BA19C721F100A25E55 /* MapLocationsViewController.swift in Sources */,
+				B415CC8F19C9E23E002997B7 /* FoundLocationsTableViewController.swift in Sources */,
+				B41006B819C7219400A25E55 /* TweetLocationsTableViewController.swift in Sources */,
+				B43A9C4719C76E57008D572D /* Marker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41006A119C71CF600A25E55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B41006AC19C71CF600A25E55 /* LoweetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B452E67C19C9B03200B1E4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B415CC7E19C9BCDF002997B7 /* SwifterLists.swift in Sources */,
+				B415CC8219C9BCDF002997B7 /* SwifterSpam.swift in Sources */,
+				B415CC7D19C9BCDF002997B7 /* SwifterFavorites.swift in Sources */,
+				B415CC8119C9BCDF002997B7 /* SwifterTrends.swift in Sources */,
+				B415CC8819C9BCDF002997B7 /* SwifterHTTPRequest.swift in Sources */,
+				B415CC7419C9BCDF002997B7 /* SwifterAuth.swift in Sources */,
+				B415CC7819C9BCDF002997B7 /* SwifterStreaming.swift in Sources */,
+				B415CC8719C9BCDF002997B7 /* SwifterAppOnlyClient.swift in Sources */,
+				B415CC7319C9BCDF002997B7 /* SwifterCredential.swift in Sources */,
+				B415CC7719C9BCDF002997B7 /* SwifterSearch.swift in Sources */,
+				B415CC7219C9BCDF002997B7 /* Swifter.swift in Sources */,
+				B415CC7519C9BCDF002997B7 /* SwifterTimelines.swift in Sources */,
+				B415CC7919C9BCDF002997B7 /* SwifterMessages.swift in Sources */,
+				B415CC7F19C9BCDF002997B7 /* SwifterSavedSearches.swift in Sources */,
+				B415CC7B19C9BCDF002997B7 /* SwifterUsers.swift in Sources */,
+				B415CC8A19C9BCE7002997B7 /* Dictionary+Swifter.swift in Sources */,
+				B415CC7C19C9BCDF002997B7 /* SwifterSuggested.swift in Sources */,
+				B415CC8019C9BCDF002997B7 /* SwifterPlaces.swift in Sources */,
+				B415CC8C19C9BCE7002997B7 /* String+Swifter.swift in Sources */,
+				B415CC8619C9BCDF002997B7 /* SwifterAccountsClient.swift in Sources */,
+				B415CC7619C9BCDF002997B7 /* SwifterTweets.swift in Sources */,
+				B415CC8919C9BCDF002997B7 /* JSON.swift in Sources */,
+				B415CC8B19C9BCE7002997B7 /* NSURL+Swifter.swift in Sources */,
+				B415CC7A19C9BCDF002997B7 /* SwifterFollowers.swift in Sources */,
+				B415CC8319C9BCDF002997B7 /* SwifterHelp.swift in Sources */,
+				B415CC8519C9BCDF002997B7 /* SwifterOAuthClient.swift in Sources */,
+				B415CC8419C9BCDF002997B7 /* SwifterClientProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B41006A719C71CF600A25E55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B410068D19C71CF600A25E55 /* Loweet */;
+			targetProxy = B41006A619C71CF600A25E55 /* PBXContainerItemProxy */;
+		};
+		B452E69419C9B03200B1E4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B452E68019C9B03200B1E4CE /* Swifter */;
+			targetProxy = B452E69319C9B03200B1E4CE /* PBXContainerItemProxy */;
+		};
+		B452E69919C9B03200B1E4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B452E68019C9B03200B1E4CE /* Swifter */;
+			targetProxy = B452E69819C9B03200B1E4CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B410069919C71CF600A25E55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B410069A19C71CF600A25E55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B410069E19C71CF600A25E55 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B410069F19C71CF600A25E55 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B41006AD19C71CF600A25E55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B41006AE19C71CF600A25E55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B41006B019C71CF600A25E55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Loweet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Debug;
+		};
+		B41006B119C71CF600A25E55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Loweet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+		B41006B319C71CF600A25E55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LoweetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loweet.app/Loweet";
+			};
+			name = Debug;
+		};
+		B41006B419C71CF600A25E55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LoweetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loweet.app/Loweet";
+			};
+			name = Release;
+		};
+		B452E69B19C9B03200B1E4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swifter-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B452E69C19C9B03200B1E4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swifter-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B410068919C71CF600A25E55 /* Build configuration list for PBXProject "Loweet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B41006AD19C71CF600A25E55 /* Debug */,
+				B41006AE19C71CF600A25E55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B41006AF19C71CF600A25E55 /* Build configuration list for PBXNativeTarget "Loweet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B41006B019C71CF600A25E55 /* Debug */,
+				B41006B119C71CF600A25E55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B41006B219C71CF600A25E55 /* Build configuration list for PBXNativeTarget "LoweetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B41006B319C71CF600A25E55 /* Debug */,
+				B41006B419C71CF600A25E55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B452E69A19C9B03200B1E4CE /* Build configuration list for PBXNativeTarget "Swifter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B452E69B19C9B03200B1E4CE /* Debug */,
+				B452E69C19C9B03200B1E4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B410068619C71CF600A25E55 /* Project object */;
+}

@@ -20,8 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("4lv5fUyoxPk895fFAiC86m4oBK3olszV1djwNr82", clientKey: "fr8LSlPeVDfaFUv9MccQFPkXLbRh7Nzqf0p0Et60")
         
         PFUser.enableAutomaticUser()
+        PFUser.currentUser().saveInBackground()
         
+        var installation = PFInstallation.currentInstallation()
+        installation["user"] = PFUser.currentUser()
+        installation.saveInBackground()
         
+        UIApplication.sharedApplication().inputAccessoryView?.inputAccessoryViewController
         
         var types = UIUserNotificationType.Sound | UIUserNotificationType.Badge | UIUserNotificationType.Alert
         var notificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)

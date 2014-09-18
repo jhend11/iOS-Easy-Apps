@@ -46,6 +46,7 @@ class MessageCell: UITableViewCell {
             
             var date = ((info.createdAt) != nil) ? info.createdAt : NSDate()
             dateLabel.text = formatter.stringFromDate(date)
+            
             var receiver = info["receiver"] as PFUser
             
             if receiver.objectId == me.objectId {

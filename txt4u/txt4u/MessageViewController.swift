@@ -15,20 +15,20 @@ import UIKit
 //
 
 class MessageViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-
+    
     var friend: PFUser! {
         willSet(user) {
-//            println("inside willset\(user)")
-
+            //            println("inside willset\(user)")
+            
         }
         didSet(user) {
-//            println("inside didset\(user)")
-
+            //            println("inside didset\(user)")
+            
         }
     }
     var conversation: [PFObject] = []
     var defaults = NSUserDefaults.standardUserDefaults()
-
+    
     @IBOutlet weak var formHolder: UIView!
     @IBOutlet weak var messageView: UITextField!
     @IBOutlet weak var sendButton: UIButton!
@@ -51,30 +51,31 @@ class MessageViewController: UIViewController,UITableViewDelegate, UITableViewDa
             messageQuery.whereKey("sender", equalTo: self.friend)
             messageQuery.limit = 1
             messageQuery.orderByDescending("createdAt")
-
-//            messageQuery.whereKey("content", equalTo: notificaton)
+            
+            //            messageQuery.whereKey("content", equalTo: notificaton)
             
             messageQuery.findObjectsInBackgroundWithBlock { (messages:[AnyObject]!, error:NSError!) -> Void in
                 
                 if messages.count > 0 {
                     self.conversation += messages as [PFObject]
-                    self.tableView.reloadData()
                     
                     let indexPath = NSIndexPath(forRow: self.conversation.count - 1, inSection: 0)
                     
                     self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+                    self.tableView.reloadData()
+
                 }
                 
             }
             
         })
-
+        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         
-//        conversation = defaults.arrayForKey(friend.username) as [PFObject]?
+        //        conversation = defaults.arrayForKey(friend.username) as [PFObject]?
         var possibleRelations = [PFUser.currentUser().username + friend.username, friend.username + PFUser.currentUser().username]
         
         var messageQuery = PFQuery(className: "Message")
@@ -83,42 +84,45 @@ class MessageViewController: UIViewController,UITableViewDelegate, UITableViewDa
         messageQuery.findObjectsInBackgroundWithBlock { (messages:[AnyObject]!, error:NSError!) -> Void in
             
             if messages.count > 0 {
-            self.conversation = messages as [PFObject]
-                self.tableView.reloadData()
+                self.conversation = messages as [PFObject]
                 
                 let indexPath = NSIndexPath(forRow: self.conversation.count - 1, inSection: 0)
                 
                 self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+                self.tableView.reloadData()
+
             }
             
         }
     }
     func textFieldDidBeginEditing(textField: UITextField) {
-        formHolder.frame.origin.y = SCREEN_HEIGHT - 280
+        var type = UIView(frame: CGRectMake(0, 0, SCREEN_WIDTH, 10))
         
+        formHolder.frame.origin.y = type.frame.size.height
         
+        messageView.inputAccessoryView = type
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         formHolder.frame.origin.y = SCREEN_HEIGHT - 60
         self.sendMessage(textField)
-
+        
         return true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func sendMessage(sender: AnyObject) {
         
         messageView.resignFirstResponder()
         
         var message = PFObject(className: "Message")
         message["sender"] = PFUser.currentUser()
-        message["reciever"] = friend
+        message["receiver"] = friend
         message["content"] = messageView.text
         message["relation"] = PFUser.currentUser().username + friend.username
         message["read"] = false
@@ -127,30 +131,24 @@ class MessageViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
         
         formHolder.frame.origin.y = SCREEN_HEIGHT - formHolder.frame.size.height
-
+        
         
         conversation.append(message)
         message.saveInBackground()
-        tableView.reloadData()
         messageView.text = ""
-
+        
         var deviceQuery = PFInstallation.query()
         deviceQuery.whereKey("user", equalTo:friend)
         
-//        deviceQuery.findObjectsInBackgroundWithBlock { (devices:[AnyObject]!, error:NSError!) -> Void in
-//            if devices.count > 0 {
-//                var badgeCount = (devices[0] as PFInstallation).badge
         
-                var data = NSDictionary (objects: [self.messageView.text,self.friend,"Increment"], forKeys: ["alert","sender","badge"])
-                
-                var push = PFPush()
-                //        push.setMessage(messageView.text)
-                push.setQuery(deviceQuery)
-                push.setData(data)
-                push.sendPushInBackground()
-                
-//            }
-//        }
+        var data = NSDictionary (objects: [self.messageView.text,self.friend,"Increment"], forKeys: ["alert","sender","badge"])
+        
+        var push = PFPush()
+        push.setQuery(deviceQuery)
+        push.setData(data)
+        push.sendPushInBackground()
+        tableView.reloadData()
+
         
         
     }
@@ -164,13 +162,9 @@ class MessageViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
         cell.messageInfo = conversation[indexPath.row]
         
-//        cell.textLabel?.text = conversation[indexPath.row]["content"] as String?
         
-//        self.tableView.separatorInset = UITableViewCellSeparatorStyle.None
-        
-//        tableView.addSubview(cell)
         return cell
     }
-
+    
 }
 
