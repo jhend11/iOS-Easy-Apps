@@ -22,6 +22,13 @@ class ViewController: UIViewController {
     
     var timer = NSTimer?()
     
+//    var timer2 = NSTimer()
+//    var startTime = NSTimeInterval()
+    
+    var date1 = NSDate()
+    
+    var reactionTime = Double()
+    
     var currentScore = 0
     
     var buttonToTap = 0
@@ -31,10 +38,17 @@ class ViewController: UIViewController {
     var allLeaderboards: [String:GKLeaderboard] = Dictionary()
     
     
+    // jo showing me how to get the reaction time
+//    var startReactionTime: NSDate!
+//    var endReactionTime: NSDate!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.blueColor()
+        
+        
         
         // first color
         var topColor = UIColor(red: 0.910, green: 0.976, blue: 0.333, alpha: 1.0)
@@ -77,6 +91,10 @@ class ViewController: UIViewController {
             
             self.view.addSubview(button)
             
+            scoreLabel.frame = CGRectMake(10, 180, 90, 40)
+            scoreLabel.backgroundColor = UIColor.lightGrayColor()
+            self.view.addSubview(scoreLabel)
+            
             println(button)
             
         }
@@ -115,7 +133,7 @@ class ViewController: UIViewController {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(speed, target: self, selector: Selector("timerDone"), userInfo: nil, repeats: false)
         
-        
+
         timerBar.layer.removeAllAnimations()
         timerBar.frame.size.width = SCREEN_WIDTH
         
@@ -138,9 +156,35 @@ class ViewController: UIViewController {
         
         if buttonToTap == button.tag {
             
+//            timer2.invalidate()
+            
+            
+            // more Jo showing me how to get reaction time
+//            endReactionTime = NSDate()
+//            let reactionTime1 = endReactionTime.timeIntervalSinceDate(startReactionTime)
+//            submitReactionTime(reactionTime1)
+            
+            var date2 : NSDate = NSDate()
+            date2.timeIntervalSinceReferenceDate
+            
+            var secondsBetween = date2.timeIntervalSinceDate(date1)
+            
+            scoreLabel.text = NSString(format: "%f", secondsBetween)
+            
+            reactionTime = secondsBetween
+            
+            var date3 : NSDate = NSDate()
+            date3.timeIntervalSinceReferenceDate
+            
+            date1 = date3
+            
             currentScore++
             
+            checkAchievement()
+
+            
             runLevel()
+            
             
         } else {
             
@@ -158,6 +202,23 @@ class ViewController: UIViewController {
     }
     
     func runLevel() {
+        
+//        let aSelector : Selector = "updateTime"
+//        timer2 = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+//        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        
+        
+        
+        // jo showing me reaction time
+//        startReactionTime = NSDate()
+        
+        
+        
+        
+        date1.timeIntervalSinceReferenceDate
+
+        
         
         buttonToTap = Int(arc4random_uniform(3))
         
@@ -203,8 +264,14 @@ class ViewController: UIViewController {
             println("scores uploaded")
         })
         
+        var scoreReporter1 = GKScore(leaderboardIdentifier: "fastest_reaction_time")
+        scoreReporter1.value = Int64(reactionTime * 1000)
+        scoreReporter1.context = 0
+        GKScore.reportScores([scoreReporter1], withCompletionHandler: { (error) -> Void in
+            println("reaction time scores uploaded")
+
+        })
         
-        var player = GKPlayer()
     }
     
     func checkAchievement() {
@@ -218,6 +285,8 @@ class ViewController: UIViewController {
                 println("achievement sent")
             })
         }
+        
+        
     
     }
     
@@ -226,6 +295,44 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // even more Jo showing me how to submit reaction times
+//    func submitReactionTime(time: NSTimeInterval) {
+//        
+//        var scoreReporter1 = GKScore(leaderboardIdentifier: "fastest_reaction_time")
+//        scoreReporter1.value = Int64(time * 1000)
+//        scoreReporter1.context = 0
+//        GKScore.reportScores([scoreReporter1], withCompletionHandler: { (error) -> Void in
+//            println("reaction time scores uploaded")
+//            
+//        })
+//    }
+    /*
+    func updateTime() {
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        //Find the difference between current time and start time.
+        var elapsedTime: NSTimeInterval = (currentTime - startTime)
+        
+        //calculate the minutes in elapsed time.
+        let minutes = UInt8(elapsedTime / 60.0)
+        elapsedTime -= (NSTimeInterval(minutes) * 60)
+        
+        //calculate the seconds in elapsed time.
+        let seconds = UInt8(elapsedTime)
+        elapsedTime -= NSTimeInterval(seconds)
+        
+        //find out the fraction of milliseconds to be displayed.
+        let fraction = UInt8(elapsedTime * 100)
+        
+        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+        let strMinutes = minutes > 9 ? String(minutes):"0" + String(minutes)
+        let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+        let strFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
+        
+        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
+        
+//        scoreLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+    }
+    */
 }
 
