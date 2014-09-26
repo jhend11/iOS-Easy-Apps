@@ -8,6 +8,8 @@
 
 import UIKit
 import SpriteKit
+import MultipeerConnectivity
+
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
@@ -25,19 +27,25 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, MCBrowserViewControllerDelegate {
 
     let statusVC = StatusViewController()
     let controlsVC = ControlsViewController()
+    let playerConnect = PlayerConnect()
+    var findFriendsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        playerConnect.browser.delegate = self
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
+            scene.size = UIScreen.mainScreen().bounds.size
             let skView = self.view as SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+//            skView.showsFPS = true
+//            skView.showsNodeCount = true
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -46,13 +54,49 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             
             skView.presentScene(scene)
+            
+            controlsVC.scene = scene
+            statusVC.scene = scene
+            playerConnect.scene = scene
         }
+        
+        findFriendsButton = UIButton(frame: self.view.frame)
+//        findFriendsButton.layer.cornerRadius = 50
+        findFriendsButton.setTitle("Find Friends", forState: .Normal)
+        findFriendsButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        findFriendsButton.backgroundColor = UIColor.whiteColor()
+        findFriendsButton.center = self.view.center
+        findFriendsButton.addTarget(self, action: Selector("findFriends"), forControlEvents: .TouchUpInside)
+        
+        controlsVC.playerConnect = playerConnect
         
         self.view.addSubview(statusVC.view)
         self.view.addSubview(controlsVC.view)
+//        self.view.addSubview(findFriendsButton)
 
     }
-
+    
+    func startGame() {
+        
+    }
+    func browserViewControllerDidFinish(
+        browserViewController: MCBrowserViewController!)  {
+            // Called when the browser view controller is dismissed (ie the Done
+            // button was tapped)
+            findFriendsButton.removeFromSuperview()
+            self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func browserViewControllerWasCancelled(
+        browserViewController: MCBrowserViewController!)  {
+            // Called when the browser view controller is cancelled
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    func findFriends() {
+        self.presentViewController(playerConnect.browser, animated: true, completion: nil)
+    }
+    
     override func shouldAutorotate() -> Bool {
         return true
     }

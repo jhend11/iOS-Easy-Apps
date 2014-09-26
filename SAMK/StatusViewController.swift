@@ -14,6 +14,7 @@ class StatusViewController: UIViewController {
     let player2HP = UIView()
     
     let timeLabel = UILabel()
+    var scene: GameScene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class StatusViewController: UIViewController {
         
         
         timeLabel.frame = CGRectMake(0, 5, 80, 40)
-        timeLabel.backgroundColor = UIColor.whiteColor()
+        timeLabel.backgroundColor = UIColor.clearColor()
         timeLabel.center = CGPointMake(self.view.center.x, timeLabel.center.y)
         timeLabel.textAlignment = NSTextAlignment.Center
         timeLabel.text = "00:00"
@@ -37,21 +38,31 @@ class StatusViewController: UIViewController {
         player2HP.backgroundColor = UIColor.greenColor()
         self.view.addSubview(player2HP)
         
-        self.setHealthForPlayer(100, player: 0)
-        self.setHealthForPlayer(90, player: 1)
+        setHealthForPlayer(MAX_HP, player: 0)
+        setHealthForPlayer(MAX_HP, player:1)
 
-        
+        NSNotificationCenter.defaultCenter().addObserverForName("healthUpdate", object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            let hurtPlayer = notification.userInfo!["player"] as Character
+            
+            let player = (hurtPlayer == self.scene.player1) ? 0 : 1
+            
+            self.setHealthForPlayer(hurtPlayer.currentHP, player: player)
+            
+        }
         // Do any additional setup after loading the view.
     }
     
-    func setHealthForPlayer(health: CGFloat, player: Int) {
+    func setHealthForPlayer(health: Int, player: Int) {
+        let healthF = CGFloat(health)
+        let maxF = CGFloat(MAX_HP)
         
         switch player {
         case 0 :
             for view in player1HP.subviews as [UIView] {
                 view.removeFromSuperview()
             }
-            var lostHealth = UIView(frame: CGRectMake(0, 0, player1HP.frame.size.width - player1HP.frame.size.width / 100 * health, 10))
+            var lostHealth = UIView(frame: CGRectMake(0, 0, player1HP.frame.size.width - player1HP.frame.size.width / maxF * healthF, 10))
             lostHealth.backgroundColor = UIColor.redColor()
             player1HP.addSubview(lostHealth)
             
@@ -59,7 +70,7 @@ class StatusViewController: UIViewController {
             for view in player2HP.subviews as [UIView] {
                 view.removeFromSuperview()
             }
-            var lostHealth = UIView(frame: CGRectMake(player2HP.frame.size.width / 100 * health, 0, player2HP.frame.size.width - player2HP.frame.size.width / 100 * health, 10))
+            var lostHealth = UIView(frame: CGRectMake(player2HP.frame.size.width / maxF * healthF, 0, player2HP.frame.size.width - player2HP.frame.size.width / maxF * healthF, 10))
             lostHealth.backgroundColor = UIColor.redColor()
             player2HP.addSubview(lostHealth)
         }

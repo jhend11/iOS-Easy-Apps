@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import SpriteKit
 
 class ControlsViewController: UIViewController {
+    
+    var scene: GameScene!
+    var playerConnect: PlayerConnect!
     
     var aButton = UIButton()
     var bButton = UIButton()
@@ -31,6 +35,8 @@ class ControlsViewController: UIViewController {
         aButton.setTitle("A", forState: .Normal)
         aButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         aButton.layer.cornerRadius = buttonSize / 2.0
+        aButton.addTarget(self, action: Selector("aTapped"), forControlEvents: .TouchUpInside)
+
         self.view.addSubview(aButton)
         
         bButton.frame = CGRectMake(SCREEN_WIDTH - buttonSize - buttonPadding, self.view.frame.size.height - buttonSize * 2.0, buttonSize, buttonSize)
@@ -38,9 +44,24 @@ class ControlsViewController: UIViewController {
         bButton.setTitle("B", forState: .Normal)
         bButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         bButton.layer.cornerRadius = buttonSize / 2.0
+        bButton.addTarget(self, action: Selector("bTapped"), forControlEvents: .TouchUpInside)
         self.view.addSubview(bButton)
         
         self.renderJoyStick()
+    }
+    
+    func aTapped() {
+    
+        scene.player1.fire()
+        playerConnect.sendPlayerInfo(["fire":true])
+
+    }
+    
+    func bTapped() {
+        
+        scene.player1.jump()
+        playerConnect.sendPlayerInfo(["jump":true])
+
     }
     
     func renderJoyStick() {
@@ -61,29 +82,12 @@ class ControlsViewController: UIViewController {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         
-        for touch in touches.allObjects as [UITouch] {
-            
-            let location = touch.locationInView(self.view)
-            
-            if CGRectContainsPoint(joyStick.frame, location) {
-                
-                joyStickHandle.center = location
-                
-            }
-        }
+        moveJoyStick(touches)
+
     }
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         
-        for touch in touches.allObjects as [UITouch] {
-            
-            let location = touch.locationInView(self.view)
-            
-            if CGRectContainsPoint(joyStick.frame, location) {
-                
-                joyStickHandle.center = location
-                
-            }
-        }
+        moveJoyStick(touches)
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
@@ -92,12 +96,29 @@ class ControlsViewController: UIViewController {
             self.joyStickHandle.center = self.joyStick.center
         })
     }
+ 
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func moveJoyStick(touches: NSSet) {
+        for touch in touches.allObjects as [UITouch] {
+            
+            let location = touch.locationInView(self.view)
+            
+            if CGRectContainsPoint(joyStick.frame, location) {
+                
+                joyStickHandle.center = location
+                
+                if location.x > joyStick.center.x + 10 {
+                    scene.player1.moveRight()
+                    playerConnect.sendPlayerInfo(["moveRight":true])
+                }
+                
+                if location.x > joyStick.center.x - 10 {
+                    scene.player1.moveLeft()
+                    playerConnect.sendPlayerInfo(["moveLeft":true])
+                }
+            }
+        }
     }
-    
     
     /*
     // MARK: - Navigation

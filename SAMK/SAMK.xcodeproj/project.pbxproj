@@ -20,6 +20,13 @@
 		B42238E519D067B600B9AFE0 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42238E419D067B600B9AFE0 /* ControlsViewController.swift */; };
 		B42238E719D0680D00B9AFE0 /* PlayerConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42238E619D0680D00B9AFE0 /* PlayerConnect.swift */; };
 		B42238E919D06E7000B9AFE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42238E819D06E7000B9AFE0 /* Constants.swift */; };
+		B4B333DE19D2FB9C00FC75E3 /* bg_front.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B333DB19D2FB9C00FC75E3 /* bg_front.png */; };
+		B4B333DF19D2FB9C00FC75E3 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B333DC19D2FB9C00FC75E3 /* cloud.png */; };
+		B4B333E019D2FB9C00FC75E3 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B333DD19D2FB9C00FC75E3 /* sun.png */; };
+		B4B333E319D3005700FC75E3 /* panda.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B4B333E219D3005700FC75E3 /* panda.atlas */; };
+		B4B333E519D3005E00FC75E3 /* bunny.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B4B333E419D3005E00FC75E3 /* bunny.atlas */; };
+		B4ECF3F919D1BEF700ACFA95 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = B4ECF3F719D1BEF700ACFA95 /* MyParticle.sks */; };
+		B4ECF3FA19D1BEF700ACFA95 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ECF3F819D1BEF700ACFA95 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		B42238E419D067B600B9AFE0 /* ControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlsViewController.swift; path = ../ControlsViewController.swift; sourceTree = "<group>"; };
 		B42238E619D0680D00B9AFE0 /* PlayerConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerConnect.swift; path = ../PlayerConnect.swift; sourceTree = "<group>"; };
 		B42238E819D06E7000B9AFE0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4B333DB19D2FB9C00FC75E3 /* bg_front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_front.png; sourceTree = "<group>"; };
+		B4B333DC19D2FB9C00FC75E3 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		B4B333DD19D2FB9C00FC75E3 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		B4B333E219D3005700FC75E3 /* panda.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = panda.atlas; sourceTree = "<group>"; };
+		B4B333E419D3005E00FC75E3 /* bunny.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bunny.atlas; sourceTree = "<group>"; };
+		B4ECF3F719D1BEF700ACFA95 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		B4ECF3F819D1BEF700ACFA95 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +87,8 @@
 		B42238AE19D064FA00B9AFE0 = {
 			isa = PBXGroup;
 			children = (
+				B4ECF3F719D1BEF700ACFA95 /* MyParticle.sks */,
+				B4ECF3F819D1BEF700ACFA95 /* spark.png */,
 				B42238B919D064FA00B9AFE0 /* SAMK */,
 				B42238D319D064FB00B9AFE0 /* SAMKTests */,
 				B42238B819D064FA00B9AFE0 /* Products */,
@@ -91,6 +107,7 @@
 		B42238B919D064FA00B9AFE0 /* SAMK */ = {
 			isa = PBXGroup;
 			children = (
+				B4B333E119D2FBAF00FC75E3 /* Images */,
 				B42238E019D0673C00B9AFE0 /* Character.swift */,
 				B42238E219D0678A00B9AFE0 /* StatusViewController.swift */,
 				B42238E419D067B600B9AFE0 /* ControlsViewController.swift */,
@@ -131,6 +148,18 @@
 				B42238D519D064FB00B9AFE0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4B333E119D2FBAF00FC75E3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4B333E419D3005E00FC75E3 /* bunny.atlas */,
+				B4B333E219D3005700FC75E3 /* panda.atlas */,
+				B4B333DB19D2FB9C00FC75E3 /* bg_front.png */,
+				B4B333DC19D2FB9C00FC75E3 /* cloud.png */,
+				B4B333DD19D2FB9C00FC75E3 /* sun.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +243,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42238CB19D064FA00B9AFE0 /* LaunchScreen.xib in Resources */,
+				B4B333E519D3005E00FC75E3 /* bunny.atlas in Resources */,
+				B4ECF3FA19D1BEF700ACFA95 /* spark.png in Resources */,
 				B42238C819D064FA00B9AFE0 /* Images.xcassets in Resources */,
+				B4B333DF19D2FB9C00FC75E3 /* cloud.png in Resources */,
 				B42238BF19D064FA00B9AFE0 /* GameScene.sks in Resources */,
+				B4B333DE19D2FB9C00FC75E3 /* bg_front.png in Resources */,
+				B4B333E319D3005700FC75E3 /* panda.atlas in Resources */,
+				B4B333E019D2FB9C00FC75E3 /* sun.png in Resources */,
 				B42238C619D064FA00B9AFE0 /* Main.storyboard in Resources */,
+				B4ECF3F919D1BEF700ACFA95 /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +469,7 @@
 				B42238DC19D064FB00B9AFE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B42238DD19D064FB00B9AFE0 /* Build configuration list for PBXNativeTarget "SAMKTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +478,7 @@
 				B42238DF19D064FB00B9AFE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
