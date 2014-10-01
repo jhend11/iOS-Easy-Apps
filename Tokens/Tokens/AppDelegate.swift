@@ -7,6 +7,7 @@
 //
 
 import UIKit
+var FS_TOKEN: String! 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
+        let range = url.absoluteString!.startIndex..<url.absoluteString!.endIndex
+        println("I'm called")
+        FS_TOKEN = url.absoluteString!.stringByReplacingOccurrencesOfString("tokens://tokens.com#access_token=", withString: "", options: NSStringCompareOptions.allZeros, range: range)
+        
+        
+        return true
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

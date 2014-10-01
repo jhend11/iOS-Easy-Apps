@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B400036119DC76C9009BF068 /* InstaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400036019DC76C9009BF068 /* InstaTableViewController.swift */; };
+		B400036319DC7762009BF068 /* InstaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B400036219DC7762009BF068 /* InstaTableViewCell.swift */; };
 		B4ADEF3B19DC350100EA6E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADEF3A19DC350100EA6E1E /* AppDelegate.swift */; };
 		B4ADEF3D19DC350100EA6E1E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADEF3C19DC350100EA6E1E /* FirstViewController.swift */; };
 		B4ADEF3F19DC350100EA6E1E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADEF3E19DC350100EA6E1E /* SecondViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B400036019DC76C9009BF068 /* InstaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaTableViewController.swift; sourceTree = "<group>"; };
+		B400036219DC7762009BF068 /* InstaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaTableViewCell.swift; sourceTree = "<group>"; };
 		B4ADEF3519DC350100EA6E1E /* Tokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ADEF3919DC350100EA6E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4ADEF3A19DC350100EA6E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				B4ADEF3C19DC350100EA6E1E /* FirstViewController.swift */,
 				B4ADEF3E19DC350100EA6E1E /* SecondViewController.swift */,
 				B4ADEF5C19DC36B200EA6E1E /* FSTableViewController.swift */,
+				B400036019DC76C9009BF068 /* InstaTableViewController.swift */,
+				B400036219DC7762009BF068 /* InstaTableViewCell.swift */,
 				B4ADEF4019DC350100EA6E1E /* Main.storyboard */,
 				B4ADEF4319DC350100EA6E1E /* Images.xcassets */,
 				B4ADEF4519DC350100EA6E1E /* LaunchScreen.xib */,
@@ -218,10 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B400036119DC76C9009BF068 /* InstaTableViewController.swift in Sources */,
 				B4ADEF3F19DC350100EA6E1E /* SecondViewController.swift in Sources */,
 				B4ADEF3B19DC350100EA6E1E /* AppDelegate.swift in Sources */,
 				B4ADEF5D19DC36B200EA6E1E /* FSTableViewController.swift in Sources */,
 				B4ADEF3D19DC350100EA6E1E /* FirstViewController.swift in Sources */,
+				B400036319DC7762009BF068 /* InstaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +421,7 @@
 				B4ADEF5819DC350100EA6E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4ADEF5919DC350100EA6E1E /* Build configuration list for PBXNativeTarget "TokensTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				B4ADEF5B19DC350100EA6E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

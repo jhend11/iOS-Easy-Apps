@@ -1,5 +1,5 @@
 //
-//  FSTableViewController.swift
+//  InstaTableViewController.swift
 //  Tokens
 //
 //  Created by JOSH HENDERSHOT on 10/1/14.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FSTableViewController: UITableViewController {
-
+class InstaTableViewController: UITableViewController {
+    
     var items: [AnyObject] = []
     
     override func viewDidLoad() {
@@ -29,19 +29,26 @@ class FSTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return items.count
     }
 
-    
+    // aae8e389ddcb4a348b263963f95639eb
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("locationCell", forIndexPath: indexPath) as UITableViewCell
-        var item = items[indexPath.row] as NSDictionary
-    
-cell.textLabel?.text = (item["firstName"]! as String) + (item["lastName"]! as String)
+        let cell = tableView.dequeueReusableCellWithIdentifier("instacell", forIndexPath: indexPath) as InstaTableViewCell
+        cell.textLabel?.text = "item"
+        let item = items[indexPath.row] as NSDictionary
+        
+        if item["images"] != nil {
+            let images_dict = item["images"]! as [String:AnyObject]
+            let standard_dict = images_dict["standard_resolution"]! as [String:AnyObject]
+            var url = standard_dict["url"]! as String
+            var imageData = NSData(contentsOfURL: NSURL(string: url))
+            cell.instaView.image = UIImage(data: imageData)
+        }
+        
         // Configure the cell...
 
         return cell
