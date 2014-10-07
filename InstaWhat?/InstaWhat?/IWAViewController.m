@@ -7,7 +7,7 @@
 //
 
 #import "IWAViewController.h"
-#import <AssetsLibrary/AssetsLibrary.h>
+#import <f/AssetsLibrary.h>
 #import "IWAFilterViewController.h"
 
 @interface IWAViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
