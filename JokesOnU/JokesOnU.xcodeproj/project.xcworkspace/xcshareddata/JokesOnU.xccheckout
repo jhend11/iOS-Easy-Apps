@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5DD242FC-672D-407C-A43C-CCF2163FC83B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JokesOnU</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2A8A6CED7A4541616302CA05735E99D4EAF37048</key>
+		<string>https://github.com/jhend11/iOS-Easy-Apps.git</string>
+		<key>C7A58BE2AA3034E56441C238391011C7D29F8C78</key>
+		<string>https://github.com/justagirlcoding/theironyard_projects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JokesOnU/JokesOnU.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2A8A6CED7A4541616302CA05735E99D4EAF37048</key>
+		<string>../../..</string>
+		<key>C7A58BE2AA3034E56441C238391011C7D29F8C78</key>
+		<string>../../../../theironyard_projects</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jhend11/iOS-Easy-Apps.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2A8A6CED7A4541616302CA05735E99D4EAF37048</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2A8A6CED7A4541616302CA05735E99D4EAF37048</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Easy-Apps</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C7A58BE2AA3034E56441C238391011C7D29F8C78</string>
+			<key>IDESourceControlWCCName</key>
+			<string>theironyard_projects</string>
+		</dict>
+	</array>
+</dict>
+</plist>

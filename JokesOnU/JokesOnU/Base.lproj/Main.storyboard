@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Make Me Laugh-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="TryMakeMeLaughVC" customModule="JokesOnU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" text="...A Joke..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD" userLabel="newjoke">
+                                <rect key="frame" x="60" y="78" width="480" height="383"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cmv-kl-Xsl">
+                                <rect key="frame" x="418" y="30" width="176" height="29"/>
+                                <segments>
+                                    <segment title="Nerdy"/>
+                                    <segment title="Explicit"/>
+                                    <segment title="Any"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.1672019938" blue="0.96908904289999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZI-gJ-prr" userLabel="SaveBtn">
+                                <rect key="frame" x="499" y="481" width="65" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.1672019938" blue="0.96908904289999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fmd-Cu-S6Z"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Like it!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="makeEmLaugh:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8Bm-1x-GNb"/>
+                                    <action selector="saveCurrentJokeToParse:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0W2-1o-95l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-KV-Bq3" userLabel="MakeMeLaughBtn">
+                                <rect key="frame" x="36" y="481" width="131" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.16720199382006462" blue="0.969089042920251" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mx3-3G-V9H"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Make Me Laugh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="makeEmLaugh:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5yI-mY-Src"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9vA-KV-Bq3" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="20" id="96N-S2-F2W"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="9vA-KV-Bq3" secondAttribute="bottom" constant="20" id="CyX-oO-oGe"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="60" id="MwF-SE-6Ew"/>
+                            <constraint firstItem="cmv-kl-Xsl" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="10" id="PWL-CC-drl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LZI-gJ-prr" secondAttribute="trailing" constant="20" id="Wct-r6-m5l"/>
+                            <constraint firstItem="LZI-gJ-prr" firstAttribute="centerY" secondItem="9vA-KV-Bq3" secondAttribute="centerY" id="h2H-ZP-N1g"/>
+                            <constraint firstItem="cmv-kl-Xsl" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" constant="10" id="h7k-5Z-hbm"/>
+                            <constraint firstItem="9vA-KV-Bq3" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="20" id="iDc-Hr-d3B"/>
+                            <constraint firstAttribute="trailing" secondItem="KQZ-1w-vlD" secondAttribute="trailing" constant="60" id="iXu-Qa-eUk"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="cmv-kl-Xsl" secondAttribute="bottom" constant="20" id="mvP-Mt-Wf5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Make Me Laugh" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="KQZ-1w-vlD" id="j4a-BY-de8"/>
+                        <outlet property="jokeTypeSegment" destination="cmv-kl-Xsl" id="Qrk-b9-6Fg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Favorite Jokes-->
+        <scene sceneID="fgN-4l-FrL">
+            <objects>
+                <tableViewController id="oFW-E7-FDb" customClass="FavoriteJokesTVC" customModule="JokesOnU" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="oAe-fc-HJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jokeCell" rowHeight="133" id="v6P-S2-vPy" customClass="JokeCell" customModule="JokesOnU" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v6P-S2-vPy" id="Sd5-mv-WJL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGd-HY-olb">
+                                            <rect key="frame" x="13" y="13" width="574" height="106.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KGd-HY-olb" secondAttribute="trailing" constant="5" id="2z7-NW-r4G"/>
+                                        <constraint firstItem="KGd-HY-olb" firstAttribute="top" secondItem="Sd5-mv-WJL" secondAttribute="topMargin" constant="5" id="J68-Co-Q8B"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KGd-HY-olb" secondAttribute="bottom" constant="5" id="REc-rT-9Rd"/>
+                                        <constraint firstItem="KGd-HY-olb" firstAttribute="leading" secondItem="Sd5-mv-WJL" secondAttribute="leadingMargin" constant="5" id="xG9-CO-7Uc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="jokeLabel" destination="KGd-HY-olb" id="4H8-JW-DhL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oFW-E7-FDb" id="Hgz-Y3-IgL"/>
+                            <outlet property="delegate" destination="oFW-E7-FDb" id="cWu-7s-Ljt"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Favorite Jokes" id="vSG-qW-UQQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWG-e3-5YU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="359"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="oFW-E7-FDb" kind="relationship" relationship="viewControllers" id="phY-3t-p2o"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>

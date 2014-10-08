@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91C5929E19E49D9B00BA0B70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5929D19E49D9B00BA0B70 /* AppDelegate.swift */; };
+		91C592A019E49D9B00BA0B70 /* TryMakeMeLaughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5929F19E49D9B00BA0B70 /* TryMakeMeLaughVC.swift */; };
+		91C592A519E49D9B00BA0B70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C592A319E49D9B00BA0B70 /* Main.storyboard */; };
+		91C592A719E49D9B00BA0B70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C592A619E49D9B00BA0B70 /* Images.xcassets */; };
+		91C592AA19E49D9B00BA0B70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C592A819E49D9B00BA0B70 /* LaunchScreen.xib */; };
+		91C592C019E49F2400BA0B70 /* JokesApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592BF19E49F2400BA0B70 /* JokesApiRequest.swift */; };
+		91C592C219E4DBF500BA0B70 /* FavoriteJokesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592C119E4DBF500BA0B70 /* FavoriteJokesTVC.swift */; };
+		91C592C719E4E3AF00BA0B70 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592C619E4E3AF00BA0B70 /* Joke.swift */; };
+		91C592D119E5125100BA0B70 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592D019E5125100BA0B70 /* CFNetwork.framework */; };
+		91C592D319E512A900BA0B70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592D219E512A900BA0B70 /* SystemConfiguration.framework */; };
+		91C592D519E512B100BA0B70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592D419E512B100BA0B70 /* Security.framework */; };
+		91C592D719E512C600BA0B70 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592D619E512C600BA0B70 /* MobileCoreServices.framework */; };
+		91C592D919E5187F00BA0B70 /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592D819E5187F00BA0B70 /* JokeCell.swift */; };
+		91C592DB19E5541B00BA0B70 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592DA19E5541B00BA0B70 /* Twitter.framework */; };
+		91C592DD19E5542D00BA0B70 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592DC19E5542D00BA0B70 /* Social.framework */; };
+		91C592DF19E5543200BA0B70 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592DE19E5543200BA0B70 /* Accounts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		91C5929819E49D9B00BA0B70 /* JokesOnU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokesOnU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C5929C19E49D9B00BA0B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C5929D19E49D9B00BA0B70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91C5929F19E49D9B00BA0B70 /* TryMakeMeLaughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryMakeMeLaughVC.swift; sourceTree = "<group>"; };
+		91C592A419E49D9B00BA0B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91C592A619E49D9B00BA0B70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		91C592A919E49D9B00BA0B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		91C592BF19E49F2400BA0B70 /* JokesApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesApiRequest.swift; sourceTree = "<group>"; };
+		91C592C119E4DBF500BA0B70 /* FavoriteJokesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteJokesTVC.swift; sourceTree = "<group>"; };
+		91C592C619E4E3AF00BA0B70 /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		91C592CA19E506F600BA0B70 /* JokesOnU-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JokesOnU-Bridging-Header.h"; sourceTree = "<group>"; };
+		91C592D019E5125100BA0B70 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		91C592D219E512A900BA0B70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		91C592D419E512B100BA0B70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		91C592D619E512C600BA0B70 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		91C592D819E5187F00BA0B70 /* JokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
+		91C592DA19E5541B00BA0B70 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		91C592DC19E5542D00BA0B70 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		91C592DE19E5543200BA0B70 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91C5929519E49D9B00BA0B70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C592DF19E5543200BA0B70 /* Accounts.framework in Frameworks */,
+				91C592DD19E5542D00BA0B70 /* Social.framework in Frameworks */,
+				91C592DB19E5541B00BA0B70 /* Twitter.framework in Frameworks */,
+				91C592D719E512C600BA0B70 /* MobileCoreServices.framework in Frameworks */,
+				91C592D519E512B100BA0B70 /* Security.framework in Frameworks */,
+				91C592D319E512A900BA0B70 /* SystemConfiguration.framework in Frameworks */,
+				91C592D119E5125100BA0B70 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91C5928F19E49D9B00BA0B70 = {
+			isa = PBXGroup;
+			children = (
+				91C5929A19E49D9B00BA0B70 /* JokesOnU */,
+				91C5929919E49D9B00BA0B70 /* Products */,
+				91C592C519E4E38800BA0B70 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		91C5929919E49D9B00BA0B70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91C5929819E49D9B00BA0B70 /* JokesOnU.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91C5929A19E49D9B00BA0B70 /* JokesOnU */ = {
+			isa = PBXGroup;
+			children = (
+				91C5929D19E49D9B00BA0B70 /* AppDelegate.swift */,
+				91C5929F19E49D9B00BA0B70 /* TryMakeMeLaughVC.swift */,
+				91C592C119E4DBF500BA0B70 /* FavoriteJokesTVC.swift */,
+				91C592D819E5187F00BA0B70 /* JokeCell.swift */,
+				91C592BF19E49F2400BA0B70 /* JokesApiRequest.swift */,
+				91C592C619E4E3AF00BA0B70 /* Joke.swift */,
+				91C592A319E49D9B00BA0B70 /* Main.storyboard */,
+				91C592A619E49D9B00BA0B70 /* Images.xcassets */,
+				91C592A819E49D9B00BA0B70 /* LaunchScreen.xib */,
+				91C5929B19E49D9B00BA0B70 /* Supporting Files */,
+				91C592CA19E506F600BA0B70 /* JokesOnU-Bridging-Header.h */,
+			);
+			path = JokesOnU;
+			sourceTree = "<group>";
+		};
+		91C5929B19E49D9B00BA0B70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C5929C19E49D9B00BA0B70 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91C592C519E4E38800BA0B70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91C592DE19E5543200BA0B70 /* Accounts.framework */,
+				91C592DC19E5542D00BA0B70 /* Social.framework */,
+				91C592DA19E5541B00BA0B70 /* Twitter.framework */,
+				91C592D619E512C600BA0B70 /* MobileCoreServices.framework */,
+				91C592D419E512B100BA0B70 /* Security.framework */,
+				91C592D219E512A900BA0B70 /* SystemConfiguration.framework */,
+				91C592D019E5125100BA0B70 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91C5929719E49D9B00BA0B70 /* JokesOnU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C592B919E49D9B00BA0B70 /* Build configuration list for PBXNativeTarget "JokesOnU" */;
+			buildPhases = (
+				91C5929419E49D9B00BA0B70 /* Sources */,
+				91C5929519E49D9B00BA0B70 /* Frameworks */,
+				91C5929619E49D9B00BA0B70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JokesOnU;
+			productName = JokesOnU;
+			productReference = 91C5929819E49D9B00BA0B70 /* JokesOnU.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91C5929019E49D9B00BA0B70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Heidi Proske";
+				TargetAttributes = {
+					91C5929719E49D9B00BA0B70 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 91C5929319E49D9B00BA0B70 /* Build configuration list for PBXProject "JokesOnU" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91C5928F19E49D9B00BA0B70;
+			productRefGroup = 91C5929919E49D9B00BA0B70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91C5929719E49D9B00BA0B70 /* JokesOnU */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91C5929619E49D9B00BA0B70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C592A519E49D9B00BA0B70 /* Main.storyboard in Resources */,
+				91C592AA19E49D9B00BA0B70 /* LaunchScreen.xib in Resources */,
+				91C592A719E49D9B00BA0B70 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91C5929419E49D9B00BA0B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C5929E19E49D9B00BA0B70 /* AppDelegate.swift in Sources */,
+				91C592C719E4E3AF00BA0B70 /* Joke.swift in Sources */,
+				91C592D919E5187F00BA0B70 /* JokeCell.swift in Sources */,
+				91C592A019E49D9B00BA0B70 /* TryMakeMeLaughVC.swift in Sources */,
+				91C592C219E4DBF500BA0B70 /* FavoriteJokesTVC.swift in Sources */,
+				91C592C019E49F2400BA0B70 /* JokesApiRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91C592A319E49D9B00BA0B70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C592A419E49D9B00BA0B70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91C592A819E49D9B00BA0B70 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C592A919E49D9B00BA0B70 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91C592B719E49D9B00BA0B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91C592B819E49D9B00BA0B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91C592BA19E49D9B00BA0B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JokesOnU",
+					/Users/hproske/Dropbox/ioslibraries/Parse,
+					/Users/midniteslide/Documents/iOS,
+					"Frameworks/parse-library",
+				);
+				INFOPLIST_FILE = JokesOnU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JokesOnU/JokesOnU-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91C592BB19E49D9B00BA0B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JokesOnU",
+					/Users/hproske/Dropbox/ioslibraries/Parse,
+					/Users/midniteslide/Documents/iOS,
+					"Frameworks/parse-library",
+				);
+				INFOPLIST_FILE = JokesOnU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JokesOnU/JokesOnU-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91C5929319E49D9B00BA0B70 /* Build configuration list for PBXProject "JokesOnU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C592B719E49D9B00BA0B70 /* Debug */,
+				91C592B819E49D9B00BA0B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C592B919E49D9B00BA0B70 /* Build configuration list for PBXNativeTarget "JokesOnU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C592BA19E49D9B00BA0B70 /* Debug */,
+				91C592BB19E49D9B00BA0B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91C5929019E49D9B00BA0B70 /* Project object */;
+}
