@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -99,10 +99,37 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Favorite Jokes-->
+        <!--My Likes-->
+        <scene sceneID="75f-UC-xnD">
+            <objects>
+                <tableViewController id="zol-rJ-Gjk" customClass="MyLikesTVC" customModule="JokesOnU" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KJ1-kK-cDl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="likesCell" id="SY4-1K-7jn">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SY4-1K-7jn" id="t85-rj-uOM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zol-rJ-Gjk" id="s7H-lP-Lu3"/>
+                            <outlet property="delegate" destination="zol-rJ-Gjk" id="bVV-CJ-IOd"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="My Likes" id="iP1-wV-hg9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KvG-Jx-sbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="778"/>
+        </scene>
+        <!--All Jokes-->
         <scene sceneID="fgN-4l-FrL">
             <objects>
-                <tableViewController id="oFW-E7-FDb" customClass="FavoriteJokesTVC" customModule="JokesOnU" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oFW-E7-FDb" customClass="AllJokesTVC" customModule="JokesOnU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="oAe-fc-HJ0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +144,7 @@
                                             <rect key="frame" x="13" y="13" width="574" height="106.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -137,7 +164,7 @@
                             <outlet property="delegate" destination="oFW-E7-FDb" id="cWu-7s-Ljt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorite Jokes" id="vSG-qW-UQQ"/>
+                    <tabBarItem key="tabBarItem" title="All Jokes" id="vSG-qW-UQQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWG-e3-5YU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,8 +182,9 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="oFW-E7-FDb" kind="relationship" relationship="viewControllers" id="phY-3t-p2o"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="zol-rJ-Gjk" kind="relationship" relationship="viewControllers" id="AMy-VF-ajy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

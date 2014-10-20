@@ -13,7 +13,7 @@
 		91C592A719E49D9B00BA0B70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C592A619E49D9B00BA0B70 /* Images.xcassets */; };
 		91C592AA19E49D9B00BA0B70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C592A819E49D9B00BA0B70 /* LaunchScreen.xib */; };
 		91C592C019E49F2400BA0B70 /* JokesApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592BF19E49F2400BA0B70 /* JokesApiRequest.swift */; };
-		91C592C219E4DBF500BA0B70 /* FavoriteJokesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592C119E4DBF500BA0B70 /* FavoriteJokesTVC.swift */; };
+		91C592C219E4DBF500BA0B70 /* AllJokesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592C119E4DBF500BA0B70 /* AllJokesTVC.swift */; };
 		91C592C719E4E3AF00BA0B70 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C592C619E4E3AF00BA0B70 /* Joke.swift */; };
 		91C592D119E5125100BA0B70 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592D019E5125100BA0B70 /* CFNetwork.framework */; };
 		91C592D319E512A900BA0B70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592D219E512A900BA0B70 /* SystemConfiguration.framework */; };
@@ -23,6 +23,9 @@
 		91C592DB19E5541B00BA0B70 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592DA19E5541B00BA0B70 /* Twitter.framework */; };
 		91C592DD19E5542D00BA0B70 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592DC19E5542D00BA0B70 /* Social.framework */; };
 		91C592DF19E5543200BA0B70 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C592DE19E5543200BA0B70 /* Accounts.framework */; };
+		B40877CE19E5744B00DB7636 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40877CC19E5744B00DB7636 /* Bolts.framework */; };
+		B44BDF5419E6CF120011B58E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40877CD19E5744B00DB7636 /* Parse.framework */; };
+		B44BDF5619E6E5C80011B58E /* MyLikesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BDF5519E6E5C80011B58E /* MyLikesTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +37,7 @@
 		91C592A619E49D9B00BA0B70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		91C592A919E49D9B00BA0B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		91C592BF19E49F2400BA0B70 /* JokesApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesApiRequest.swift; sourceTree = "<group>"; };
-		91C592C119E4DBF500BA0B70 /* FavoriteJokesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteJokesTVC.swift; sourceTree = "<group>"; };
+		91C592C119E4DBF500BA0B70 /* AllJokesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllJokesTVC.swift; sourceTree = "<group>"; };
 		91C592C619E4E3AF00BA0B70 /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		91C592CA19E506F600BA0B70 /* JokesOnU-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JokesOnU-Bridging-Header.h"; sourceTree = "<group>"; };
 		91C592D019E5125100BA0B70 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -45,6 +48,9 @@
 		91C592DA19E5541B00BA0B70 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		91C592DC19E5542D00BA0B70 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		91C592DE19E5543200BA0B70 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B40877CC19E5744B00DB7636 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Documents/iOSFrameworks/parse-library/Bolts.framework"; sourceTree = "<group>"; };
+		B40877CD19E5744B00DB7636 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Documents/iOSFrameworks/parse-library/Parse.framework"; sourceTree = "<group>"; };
+		B44BDF5519E6E5C80011B58E /* MyLikesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLikesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C592DF19E5543200BA0B70 /* Accounts.framework in Frameworks */,
+				B44BDF5419E6CF120011B58E /* Parse.framework in Frameworks */,
 				91C592DD19E5542D00BA0B70 /* Social.framework in Frameworks */,
 				91C592DB19E5541B00BA0B70 /* Twitter.framework in Frameworks */,
+				B40877CE19E5744B00DB7636 /* Bolts.framework in Frameworks */,
 				91C592D719E512C600BA0B70 /* MobileCoreServices.framework in Frameworks */,
 				91C592D519E512B100BA0B70 /* Security.framework in Frameworks */,
 				91C592D319E512A900BA0B70 /* SystemConfiguration.framework in Frameworks */,
@@ -87,7 +95,8 @@
 			children = (
 				91C5929D19E49D9B00BA0B70 /* AppDelegate.swift */,
 				91C5929F19E49D9B00BA0B70 /* TryMakeMeLaughVC.swift */,
-				91C592C119E4DBF500BA0B70 /* FavoriteJokesTVC.swift */,
+				91C592C119E4DBF500BA0B70 /* AllJokesTVC.swift */,
+				B44BDF5519E6E5C80011B58E /* MyLikesTVC.swift */,
 				91C592D819E5187F00BA0B70 /* JokeCell.swift */,
 				91C592BF19E49F2400BA0B70 /* JokesApiRequest.swift */,
 				91C592C619E4E3AF00BA0B70 /* Joke.swift */,
@@ -111,6 +120,8 @@
 		91C592C519E4E38800BA0B70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B40877CC19E5744B00DB7636 /* Bolts.framework */,
+				B40877CD19E5744B00DB7636 /* Parse.framework */,
 				91C592DE19E5543200BA0B70 /* Accounts.framework */,
 				91C592DC19E5542D00BA0B70 /* Social.framework */,
 				91C592DA19E5541B00BA0B70 /* Twitter.framework */,
@@ -196,7 +207,8 @@
 				91C592C719E4E3AF00BA0B70 /* Joke.swift in Sources */,
 				91C592D919E5187F00BA0B70 /* JokeCell.swift in Sources */,
 				91C592A019E49D9B00BA0B70 /* TryMakeMeLaughVC.swift in Sources */,
-				91C592C219E4DBF500BA0B70 /* FavoriteJokesTVC.swift in Sources */,
+				91C592C219E4DBF500BA0B70 /* AllJokesTVC.swift in Sources */,
+				B44BDF5619E6E5C80011B58E /* MyLikesTVC.swift in Sources */,
 				91C592C019E49F2400BA0B70 /* JokesApiRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +322,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JokesOnU",
-					/Users/hproske/Dropbox/ioslibraries/Parse,
-					/Users/midniteslide/Documents/iOS,
-					"Frameworks/parse-library",
+					"/Users/midniteslide/Documents/iOSFrameworks/parse-library",
 				);
 				INFOPLIST_FILE = JokesOnU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -330,9 +340,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JokesOnU",
-					/Users/hproske/Dropbox/ioslibraries/Parse,
-					/Users/midniteslide/Documents/iOS,
-					"Frameworks/parse-library",
+					"/Users/midniteslide/Documents/iOSFrameworks/parse-library",
 				);
 				INFOPLIST_FILE = JokesOnU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

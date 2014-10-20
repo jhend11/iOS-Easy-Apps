@@ -22,17 +22,25 @@ class TryMakeMeLaughVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        jokeLabel.layer.borderWidth = 5
+        jokeLabel.layer.borderColor = UIColor.greenColor().CGColor
     }
     
     @IBAction func saveCurrentJokeToParse(sender: AnyObject) {
+        
         
         let parseJoke = PFObject(className: "Jokes")
         
         parseJoke.setObject(currentJoke.jokeText, forKey: "text")
         parseJoke.setObject(currentJoke.id, forKey: "id")
         parseJoke.setObject(currentJoke.categories, forKey: "categories")
+        parseJoke.setObject(PFUser.currentUser(), forKey: "owner")
+//        parseJoke.setObject(PFUser.currentUser().objectId, forKey: "owner2")
+
         
+        println(PFUser.currentUser())
         println("Adding PFObject \(parseJoke)")
+
         
         parseJoke.saveInBackgroundWithBlock { (success, error) -> Void in
             

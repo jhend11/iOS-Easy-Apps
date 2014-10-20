@@ -8,8 +8,8 @@
 
 import UIKit
 
-let PARSE_APP_ID = "ZZeIo4aXvQCbv0k5S4ukcoXC3gh10ky6M7rET6Gl"
-let PARSE_CLIENT_ID = "ICAMb93iGqrZkEcpY3CXjJemyHQbOx9IZGaxuJbF"
+let PARSE_APP_ID = "OVacPcDekaYvtIgrLk7dzrpJOH4IvfCTYNRmsEnL"
+let PARSE_CLIENT_ID = "0EdbV7q6aZ3A5m4uEueTs9EIuO8JetoTM0GeNpfp"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
